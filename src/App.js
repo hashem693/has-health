@@ -1,9 +1,10 @@
 import './App.scss';
-import ContactInfo from './Pages/ContactInfo';
-import Appointment from './Pages/Appointment';
-import SignIn from './Pages/SignIn';
-import VisitorSignUp from './Pages/VisitorSignUp';
-import DoctorSignUp from './Pages/DoctorSignUp';
+import ContactInfo   from './AZPages/ContactInfo';
+import Appointment   from './AZPages/Appointment';
+import SignIn        from './AZPages/SignIn';
+import VisitorSignUp from './AZPages/VisitorSignUp';
+import DoctorSignUp  from './AZPages/DoctorSignUp';
+
 function App() {
   return (
     <div className="App">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button, Dropdown } from 'react-bootstrap';
-import '../Styles/Appointment.scss';
+import '../AZStyles/Appointment.scss';
 import AppointmentSlct from '../AZComponents/AppointmentSlct';
 const SpecialistLst = [ 'Bones', 'Dermal', 'Rays', 'Analyzes' ],
       LocationLst = [ 'Alex', 'Tanta', 'Cairo', 'Giza' ],

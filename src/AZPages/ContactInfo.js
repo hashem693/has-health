@@ -3,7 +3,7 @@ import { Col, Container, Row, ListGroup } from 'react-bootstrap';
 import HeroContent from '../AZComponents/HeroContent';
 import MsgForm from '../AZComponents/MsgForm';
 import SideBar from '../AZComponents/SideBar';
-import '../Styles/ContactInfo.scss';
+import '../AZStyles/ContactInfo.scss';
 import {FaFacebookF, FaTwitter, FaGooglePlusG, FaRss, FaMapMarkerAlt, FaCalendarAlt, FaPhoneAlt, FaRegEnvelope} from 'react-icons/fa';
 const sd1icc = [ <FaFacebookF />, <FaTwitter />, <FaGooglePlusG />, <FaRss /> ];
 const ContactInfo = () => {

@@ -1,24 +1,6 @@
-/*import React from 'react';
-import { Container, Row, Col, Form, ButtonGroup, Button } from 'react-bootstrap';
-import '../Styles/SignIn.scss';
-import { FaUserMd, FaUser } from 'react-icons/fa';
-function SignIn() {
-
-    function clickHanduler(event) {
-        console.log("Doctor clicked");
-        event.target.property
-    }
-
-    return (
-
-    )
-}
-
-export default SignIn
-*/
 import React, { Component } from 'react';
-import { Container, Row, Col, Form, ButtonGroup, Button } from 'react-bootstrap';
-import '../Styles/SignIn.scss';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import '../AZStyles/SignIn.scss';
 import { FaUserMd, FaUser } from 'react-icons/fa';
 export class SignIn extends Component {
     constructor(){
