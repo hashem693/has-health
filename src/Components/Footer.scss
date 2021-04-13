@@ -1,0 +1,25 @@
+@import '../mainDesigns/Variables.scss';
+.footer{
+    color: $base2_color;
+    background: {        
+       size: cover;
+       color:$main_color ;
+    };
+    &__main{
+        a{
+            color: $base2_color;
+            &:hover{
+                color: $base_color;
+            }
+        }
+    }
+    &__follow{
+        li:hover{
+            color: $base_color;
+        }
+
+    }
+    &__copyrights{
+        border-top: solid 1px $base_color
+    }
+}

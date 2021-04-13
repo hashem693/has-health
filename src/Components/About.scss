@@ -1,0 +1,50 @@
+@import '../mainDesigns/Placeholder.scss' ,  '../mainDesigns/Variables.scss';
+.about{
+    h2{
+        &:after {
+            @extend %h2_lineAfter;
+        }
+    }
+    &__link{
+        color: $base2_color;
+        background-color: $main2_color;
+        &:hover{
+            background-color: $main_color;
+            color: $base2_color;
+        }
+    }
+    .Blog{
+        &__item{
+           &__Caption{
+                background-color: rgba(23, 29, 28, 0.8);
+                color: $base2_color;
+                bottom: 0;
+            }
+        }
+    }
+    .Testimonials{
+        background-color: $base_color;
+        &__item {
+            color: $base3_color;
+        }
+    }
+    &__bg{
+        color: $base2_color;
+        height: 430px;
+        background-size: cover;
+        &__caption{
+            right: 20%;            
+            top: 50%;
+            @media screen and (max-width:320px) {
+                right: 10%;                
+            }
+            p{
+              background-color: $main2_color;
+            }
+            .second{
+                background-color: $base3_color;
+            }
+        }
+    }
+   
+}
