@@ -1,0 +1,11 @@
+@import '../mainDesigns/Variables.scss';
+
+%h2_lineAfter{
+    content: "";
+    width: 70px;
+    height: 3px;
+    background-color: $main2_color;
+    display: block;
+    position: relative;
+    margin: 20px auto 40px;
+}
