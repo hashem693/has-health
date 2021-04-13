@@ -1,19 +1,19 @@
-import { BrowserRouter as Router, Route , Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
-import NavBar from "./Components/NavBar";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Specialties from "./Components/Specialties";
-import Doctors from "./Components/Doctors";
-import Contactus from "./Components/Contactus"
-import Awareness from "./Components/Awareness";
-import Insurance from "./Components/Insurance";
-import MedicalExamination from "./Components/MedicalExamination";
-import MedicalXrays from "./Components/MedicalXrays";
-import MedicalTests from "./Components/MedicalTests";
-import Appointment from "./Components/Appointment";
-import IconBreadcrumbs from "./Components/IconBreadcrumbs";
-import Footer from "./Components/Footer";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Specialties from "./components/Specialties";
+import Doctors from "./components/Doctors";
+import Contactus from "./components/Contactus";
+import Awareness from "./components/Awareness";
+import Insurance from "./components/Insurance";
+import MedicalExamination from "./components/MedicalExamination";
+import MedicalXrays from "./components/MedicalXrays";
+import MedicalTests from "./components/MedicalTests";
+import Appointment from "./components/Appointment";
+import IconBreadcrumbs from "./components/IconBreadcrumbs";
+import Footer from "./components/Footer";
 
 function App() {
   return (
