@@ -1,0 +1,40 @@
+*{
+    background-color: #FFFBFA!important;
+}
+$HdColor: #171D1C;
+$TxtColor: #7e9a96;
+$TxtHoverColor: #435653;
+$LnColor: #22A7F0;
+$IcnColor: #5FBFF9;
+//$BtnColor: #e74c3c;
+$BtnColor: #22A7F0;
+.container{
+    .row{
+        &>.col-lg-12{
+            &:first-of-type{
+                h1{ color: $HdColor; }
+                p{ color: $TxtColor; }
+            }
+            &:last-of-type{
+                form{
+                    
+                    &>.form-row{
+                        justify-content: center;
+                        .col{ padding: 0; }
+                        select{ border-radius: 2rem;
+                            option{ color: $TxtHoverColor; }
+                        }
+                    }
+                    &>.form-group{  
+                        justify-content: center;
+                        button{
+                            background-color: $BtnColor!important;
+                            color: #FFFBFA;
+                            border-radius: 2rem;    border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
