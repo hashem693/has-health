@@ -6,7 +6,7 @@ import LocationCard from "../LocationCard/LocationCard";
 function LocationSection() {
   return (
     <section className="py-5">
-      <h2>Locations</h2>
+      <h2 className="text-center">Locations</h2>
       <Carousel
         prevIcon={<FaArrowLeft className="text-dark" />}
         nextIcon={<FaArrowRight className="text-dark" />}

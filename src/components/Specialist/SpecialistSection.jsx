@@ -5,7 +5,7 @@ function SpecialistSection() {
   return (
     <section className="py-5 specialbg">
       <div className="container">
-        <h2>Specialties</h2>
+        <h2 className="text-center">Specialties</h2>
         <div className="row justify-content-center">
           <SpecialistCard />
           <SpecialistCard />
