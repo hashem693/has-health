@@ -4,7 +4,7 @@ function DoctorSignUp() {
     return (
         <Container>
             <Row className="mt-4">
-                <Col lg="12">
+                <Col lg="12" className="text-center">
                 <img src="" alt="Logo"/>
                 </Col>
                 <Col lg="12">

@@ -4,7 +4,7 @@ function VisitorSignUp() {
     return (
         <Container>
             <Row>
-                <Col lg="12">
+                <Col lg="12" className="text-center">
                 <img src="" alt="Logo"/>
                 </Col>
                 <Col lg="12">

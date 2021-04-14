@@ -14,7 +14,7 @@ export class SignIn extends Component {
         return (
             <Container>
             <Row>
-                <Col lg="8">
+                <Col lg="8" className="text-center">
                     <img src="" alt="logo"/>
                     <h3>Sign in as</h3>     
                     {/*<section>
