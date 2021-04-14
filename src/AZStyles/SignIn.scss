@@ -1,39 +1,55 @@
-$HdColor: #171D1C;
+$HdColor: #171d1c;
 $TxtColor: #7e9a96;
 $TxtHoverColor: #435653;
-$LnColor: #22A7F0;
-$IcnColor: #5FBFF9;
+$LnColor: #22a7f0;
+$IcnColor: #5fbff9;
 //$BtnColor: #e74c3c;
-$BtnColor: #22A7F0;
-*{
-    background-color: #FFFBFA!important; 
-    p{ color: $TxtColor; font-size: 0.75rem !important; }
-}
-.deActive{ background-color: transparent!important; }
-.onActive{ //background-color: green!important; 
-    /*& ~ *{ background-color: transparent!important;  }*/
-    & > *{ color: green!important; }
-}
-button{ background-color: $BtnColor!important;; }
-label{ color: $HdColor!important; }
-input[type="radio"]{ opacity: 0; }
-.container{
-    .row{
-        justify-content: center;
-        .col-lg-8{
-            img{}
-            h3{}
-            section{
-                div{ display: inline-block;  margin: 1rem 0.8rem;
-                    svg{ font-size: 3.5rem;   border-radius: 50%;  border: 1px solid #333; }
-                    p{  }
-                }
-            }
-            form{
-                &>.form-group:first-of-type{
+$BtnColor: #22a7f0;
 
-                }
-            }
+.deActive {
+  background-color: transparent !important;
+}
+.onActive {
+  //background-color: green!important;
+  /*& ~ *{ background-color: transparent!important;  }*/
+  & > * {
+    color: green !important;
+  }
+}
+button {
+  background-color: $BtnColor !important;
+}
+label {
+  color: $HdColor !important;
+}
+input[type="radio"] {
+  opacity: 0;
+}
+.container {
+  .row {
+    justify-content: center;
+    .col-lg-8 {
+      img {
+      }
+      h3 {
+      }
+      section {
+        div {
+          display: inline-block;
+          margin: 1rem 0.8rem;
+          svg {
+            font-size: 3.5rem;
+            border-radius: 50%;
+            border: 1px solid #333;
+          }
+          p {
+          }
         }
+      }
+      form {
+        & > .form-group:first-of-type {
+        }
+      }
     }
+  }
 }

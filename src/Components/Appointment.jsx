@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Appointmentz from "../AZComponents/Appointmentz";
 
 function Appointment() {
-    return (
-        <div>
-            appointment
-        </div>
-    )
+  return (
+    <div>
+      <Appointmentz />
+    </div>
+  );
 }
 
-export default Appointment
+export default Appointment;

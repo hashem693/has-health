@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import ContactInfo from "../AZComponents/ContactInfo";
 
 function Contactus() {
-    return (
-        <div>
-            contact us page
-        </div>
-    )
+  return (
+    <div>
+      <ContactInfo />
+    </div>
+  );
 }
 
-export default Contactus
+export default Contactus;
