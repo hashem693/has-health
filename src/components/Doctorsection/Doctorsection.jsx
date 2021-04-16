@@ -3,6 +3,7 @@ import { useFirestore } from "../../firebase/useFirestore";
 import { useState, useEffect } from "react";
 import { db } from "../../firebase/firebase";
 import Card1 from "../Card/Card1";
+import "../Card/Card1.scss";
 
 function Doctorsection() {
   const [doctorsthree, setdoctorsthree] = useState([]);
@@ -21,7 +22,8 @@ function Doctorsection() {
   }, []);
 
   return (
-    <section className="py-5">
+    <section className="py-5 doctorsec">
+      <h2 className="text-center">Doctors</h2>
       <div className="container">
         <h2 className="text-center">Doctors</h2>
         <div className="row justify-content-center">
@@ -35,9 +37,7 @@ function Doctorsection() {
           ))}
         </div>
         <div className="text-center">
-          <Button className="px-4 py-2" style={{ backgroundColor: "#22a7f0" }}>
-            View All
-          </Button>
+          <Button className="px-4 py-2 viewbtn">View All</Button>
         </div>
       </div>
     </section>

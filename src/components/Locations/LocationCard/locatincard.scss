@@ -1,13 +1,30 @@
-.cardb {
-  background-color: #efe9f4 !important;
-  .MapMarker {
-    color: #22a7f0;
-    font-size: 1.5rem;
+@import './../../../mainDesigns/Variables.scss' , './../../../mainDesigns/Placeholder.scss';
+.locationsec{
+  h2{
+    &::after{
+      @extend %h2_lineAfter;
+    }
   }
-  .branch-name {
-    color: #22a7f0;
+  .carousel-indicators li{
+    background-color: $base_color !important;
+
   }
-  .buttonb {
-    background-color: #22a7f0;
+  .cardb {
+    background-color: $base_color;
+    .MapMarker {
+      color: $main_color;
+      font-size: 1.5rem;
+    }
+    .branch-name {
+      color: $main_color;
+    }
+    .buttonb {
+      background-color: $main_color;
+      border: none;
+      &:hover{
+        background-color: $main_color;
+      }
+    }
   }
 }
+

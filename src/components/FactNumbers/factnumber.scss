@@ -1,3 +1,6 @@
-h2 {
-  font-size: 3rem;
+@import './../../mainDesigns/Variables.scss' , './../../mainDesigns/Placeholder.scss';
+.factnumbers{
+ background-color: $base_color;
+ color: $base3_color;
 }
+

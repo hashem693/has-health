@@ -1,21 +1,9 @@
-$HdColor: #171d1c;
-$TxtColor: #7e9a96;
-$TxtHoverColor: #435653;
-$LnColor: #22a7f0;
-$IcnColor: #5fbff9;
-//$BtnColor: #e74c3c;
-$BtnColor: #22a7f0;
-.container {
+@import '../mainDesigns/Variables.scss' , '../mainDesigns/Placeholder.scss';
+
+.appointmentz {
+  color:$base3_color;
   .row {
     & > .col-lg-12 {
-      &:first-of-type {
-        h1 {
-          color: $HdColor;
-        }
-        p {
-          color: $TxtColor;
-        }
-      }
       &:last-of-type {
         form {
           & > .form-row {
@@ -25,16 +13,13 @@ $BtnColor: #22a7f0;
             }
             select {
               border-radius: 2rem;
-              option {
-                color: $TxtHoverColor;
-              }
             }
           }
           & > .form-group {
             justify-content: center;
             button {
-              background-color: $BtnColor !important;
-              color: #fffbfa;
+              background-color: $main_color;
+              color:$base2_color;
               border-radius: 2rem;
               border: none;
             }

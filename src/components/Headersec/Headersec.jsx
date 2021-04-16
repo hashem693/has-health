@@ -9,7 +9,8 @@ function Headersec() {
   return (
     <Carousel fade className=" position-relative">
       <Carousel.Item className="high overlay">
-        <img className="d-block w-100" src={pic1} alt="First slide" />
+
+        <img className="img-fluid h-100 w-100" src={pic1} alt="First slide" />
         <Carousel.Caption>
           <h1 className="text-white">Has health</h1>
           <p className="text-white">
@@ -18,7 +19,7 @@ function Headersec() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className="high overlay">
-        <img className="d-block w-100" src={pic2} alt="Second slide" />
+        <img className="img-fluid h-100 w-100" src={pic2} alt="Second slide" />
 
         <Carousel.Caption>
           <h1 className="text-white">Has health</h1>
@@ -28,7 +29,7 @@ function Headersec() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className="high overlay">
-        <img className="d-block w-100" src={pic3} alt="Third slide" />
+        <img className="img-fluid h-100 w-100" src={pic3} alt="Third slide" />
 
         <Carousel.Caption>
           <h1 className="text-white">Has health</h1>
