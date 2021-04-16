@@ -11,7 +11,12 @@ const Doctors = () => {
         <h2 className="text-center">Doctors</h2>
         <div className="row justify-content-center">
           {doctors.map((doctor) => (
-            <Card1 key={doctor.id} name={doctor.name} />
+            <Card1
+              key={doctor.id}
+              firstName={doctor.firstName}
+              lastname={doctor.lastname}
+              specialist={doctor.specialist}
+            />
           ))}
         </div>
       </div>

@@ -13,8 +13,8 @@ export const useFirestore = () => {
     });
     return unsub;
   }, []);
-  const addDoctor = async (doctor) => {
-    await db.collection("doctors").add({ ...doctor });
+  const addDoctor = async (doctor, usertype) => {
+    await db.collection(usertype).add({ ...doctor });
   };
   return { doctors, addDoctor };
 };

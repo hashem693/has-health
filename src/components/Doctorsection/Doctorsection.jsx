@@ -26,7 +26,12 @@ function Doctorsection() {
         <h2 className="text-center">Doctors</h2>
         <div className="row justify-content-center">
           {doctorsthree.map((doctor) => (
-            <Card1 name={doctor.name} key={doctor.id} />
+            <Card1
+              firstName={doctor.firstName}
+              lastname={doctor.lastname}
+              specialist={doctor.specialist}
+              key={doctor.id}
+            />
           ))}
         </div>
         <div className="text-center">
