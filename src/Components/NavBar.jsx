@@ -19,7 +19,7 @@ const NavBar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="m-auto">
           <Nav.Link>
-            <NavLink className="link text-decoration-none" exact to="/">
+            <NavLink className="link text-decoration-none" to="/">
               Home
             </NavLink>
           </Nav.Link>

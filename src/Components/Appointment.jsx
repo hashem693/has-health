@@ -10,3 +10,29 @@ function Appointment() {
 }
 
 export default Appointment;
+
+// doctors{
+//   id:
+//   name:
+//   Appointment:[{},{}]
+//   phone:
+//   specialist:
+//   branch:{name:
+//           address:
+//          }
+//   email:
+//   password:
+//   gender:
+// }
+// patient{
+//   id:
+//   name:
+//   userAppointment:[]
+//   phone:
+//   email:
+//   password:
+// }
+// branch{
+//   name:
+//   address:
+// }
