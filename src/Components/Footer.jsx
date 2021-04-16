@@ -53,7 +53,7 @@ function Footer() {
             <h5 className="pb-3">Main</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <Link exact className="text-decoration-none" to="/">
+                <Link className="text-decoration-none" to="/">
                   Home
                 </Link>
               </li>

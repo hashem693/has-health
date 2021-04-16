@@ -1,9 +1,10 @@
 import React from "react";
+import "./factnumber.scss";
 import FactNumbers from "./FactNumbers";
 
 function FactsSections() {
   return (
-    <section className="py-5">
+    <section className="factnumbers py-5">
       <div className="container">
         <div className="d-flex justify-content-center flex-wrap">
           <FactNumbers num="10" fact="Locations" />

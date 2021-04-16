@@ -1,45 +1,24 @@
-$HdColor: #171d1c;
-$TxtColor: #7e9a96;
-$TxtHoverColor: #435653;
-$LnColor: #22a7f0;
-$IcnColor: #5fbff9;
-//$BtnColor: #e74c3c;
-$BtnColor: #22a7f0;
+@import '../mainDesigns/Variables.scss' , '../mainDesigns/Placeholder.scss';
 
-.container {
+.contact {
+  color: $base3_color;
   .row {
     .col-lg-8 {
       .jumbotron {
         .container {
           h3 {
             position: relative;
-            margin-bottom: 3.5rem;
-            color: $HdColor;
-            &::before {
-              content: "";
-              height: 0.2rem;
-              width: 4rem;
-              background-color: $LnColor;
-              position: absolute;
-              bottom: -1.2rem;
-              left: 0;
+            &::after {
+              @extend %h2_lineAfter;
+              margin: 20px 0px 30px;
             }
-          }
-          p {
-            font-size: 0.75rem !important;
           }
         }
       }
       div:nth-of-type(2) {
-        h6 {
-          color: $HdColor;
-        }
         form {
-          label {
-            color: #435653;
-          }
           button {
-            background-color: $BtnColor !important;
+            background-color: $main_color;
             border-radius: 5rem;
             border: none;
           }
@@ -58,7 +37,6 @@ $BtnColor: #22a7f0;
             content: "";
             height: 1px;
             width: 3rem;
-            background-color: $LnColor;
             position: absolute;
             top: -1px;
             left: 0;
@@ -72,20 +50,16 @@ $BtnColor: #22a7f0;
               margin-right: 0.8rem;
               padding: 0;
               a {
-                background-color: $TxtColor !important;
+                background-color: $main2_color ;
+                color: $base2_color;
                 width: 100%;
                 padding: 0.5rem 0.8rem;
                 border-radius: 50%;
                 svg {
-                  background-color: inherit !important;
-                  color: $TxtHoverColor !important;
                   margin-bottom: 0.2rem;
                 }
                 &:hover {
-                  background-color: $IcnColor !important;
-                  svg {
-                    color: #fffbfa !important;
-                  }
+                  background-color: $main_color ;
                 }
               }
             }
@@ -93,20 +67,16 @@ $BtnColor: #22a7f0;
         }
         &:not(:first-of-type) {
           svg {
-            color: $IcnColor !important;
+            color: $main2_color ;
           }
           p {
-            a {
-              color: $TxtColor;
-              text-decoration: none;
-              &:hover {
-                color: $TxtHoverColor;
-              }
+           a {
+             color: $base3_color;
             }
           }
         }
         &:last-of-type svg {
-          margin-top: 0.1rem !important;
+          margin-top: 0.1rem ;
         }
       }
     }

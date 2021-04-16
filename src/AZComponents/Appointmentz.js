@@ -10,16 +10,16 @@ class Appointmentz extends React.Component {
 
     render() {
         return (
-        <Container>
-            <Row>
-                <Col lg="12">
-                <h1 className="text-center">Request an appointment now</h1>
-                <p className="text-center">Fill in you details below and we will contact you to confirm</p>
+        <Container className="appointmentz py-5">
+            <Row className=" py-2">
+                <Col lg="12" className="text-center">
+                <h2>Request an appointment now</h2>
+                <p className="text-muted">Fill in you details below and we will contact you to confirm</p>
                 </Col>
                 <Col lg="12">
-                <Form>
+                <Form className="pt-4">
                     <Form.Row>
-                        <Col lg="6" md="10">
+                        <Col lg="6" md="10"> 
                             <Form.Group controlId="formGridSpecialist">                                
                                 <Form.Control as="select" defaultValue="Specialist *">
                                     <option class="d-none">Specialist *</option>
@@ -42,7 +42,7 @@ class Appointmentz extends React.Component {
                             </Form.Group>
                         </Col>
                     </Form.Row>
-                    <Form.Row>
+                    <Form.Row >
                         <Col lg="6" md="10">
                             <Form.Group controlId="formGridApptDt">                                
                                 <Form.Control type="date" placeholder="Appointment Date *" />

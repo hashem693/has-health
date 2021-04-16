@@ -4,7 +4,8 @@ import specializedClinics from '../../images/specializedClinics.jpg'
 
 function Card1() {
   return (
-    <Card style={{ width: '20rem' }} className="m-3 border-0 shadow  mb-5 bg-white rounded">
+    <div className="col-md-4 col-sm-12">
+      <Card className="m-3 border-0 shadow text-center  mb-5 bg-white rounded">
     <Card.Img variant="top" src={specializedClinics} />
       <Card.Body>
      <Card.Title>Doctors Name</Card.Title>
@@ -14,6 +15,7 @@ function Card1() {
      </Card.Text>
      </Card.Body>
     </Card>
+    </div>
   )
 }
 

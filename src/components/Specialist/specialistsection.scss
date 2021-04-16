@@ -1,13 +1,30 @@
+@import "./../../mainDesigns/Variables.scss",
+  "./../../mainDesigns/Placeholder.scss";
 .specialbg {
-  background-color: #efe9f4;
-}
-.girdcenter {
-  //   display: grid;
-  //   place-items: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btnbg {
-  background-color: #22a7f0;
+  h2 {
+    &::after {
+      @extend %h2_lineAfter;
+    }
+  }
+  .girdcenter {
+    &:hover .girdcenter__overlay {
+      opacity: 1;
+    }
+    &__overlay {
+      background-color: rgba(23, 29, 28, 0.3);
+      color: $base2_color;
+      p {
+        background-color: $main_color;
+      }
+      opacity: 0;
+      transition: opacity 0.75s;
+    }
+  }
+  .btnbg {
+    background-color: $main_color;
+    border: none;
+    &:hover {
+      background-color: $main_color;
+    }
+  }
 }

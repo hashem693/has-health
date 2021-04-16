@@ -1,0 +1,16 @@
+@import './../../mainDesigns/Placeholder.scss' , './../../mainDesigns/Variables.scss';
+
+.doctorsec{
+    h2{
+        &::after{
+          @extend %h2_lineAfter;
+        }
+      }
+    .viewbtn{
+        background-Color: $main_color;
+        border: none;
+        &:hover{
+            background-Color: $main_color; 
+        }
+    }
+}
