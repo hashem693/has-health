@@ -15,6 +15,7 @@ import Appointment from "./components/Appointment";
 import IconBreadcrumbs from "./components/IconBreadcrumbs";
 import Footer from "./components/Footer";
 import Login from "./components/Login/Login";
+import SignUp from "./components/signUp/SignUp";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/tests" component={MedicalTests} />
           <Route path="/appointment" component={Appointment} />
           <Route path="/login" component={Login} />
+          <Route path="/signup" component={SignUp} />
         </Switch>
         <Footer />
       </div>

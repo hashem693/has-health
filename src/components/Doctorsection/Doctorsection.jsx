@@ -1,5 +1,4 @@
 import { Button } from "react-bootstrap";
-import { useFirestore } from "../../firebase/useFirestore";
 import { useState, useEffect } from "react";
 import { db } from "../../firebase/firebase";
 import Card1 from "../Card/Card1";
@@ -25,7 +24,6 @@ function Doctorsection() {
     <section className="py-5 doctorsec">
       <h2 className="text-center">Doctors</h2>
       <div className="container">
-        <h2 className="text-center">Doctors</h2>
         <div className="row justify-content-center">
           {doctorsthree.map((doctor) => (
             <Card1

@@ -1,12 +1,13 @@
-import React from 'react';
-import './Login.scss';
+import React from "react";
+import "./Login.scss";
+import SignIn from "../../AZComponents/SignIn";
 
 function Login() {
-    return (
-        <div >
-            login page
-        </div>
-    )
+  return (
+    <div>
+      <SignIn />
+    </div>
+  );
 }
 
-export default Login
+export default Login;

@@ -1,13 +1,7 @@
 import React from "react";
-import DoctorSignUp from "../AZComponents/DoctorSignUp";
 
 function Insurance() {
-  return (
-    <div>
-      insurance page
-      <DoctorSignUp />
-    </div>
-  );
+  return <div>insurance page</div>;
 }
 
 export default Insurance;

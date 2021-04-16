@@ -1,25 +1,8 @@
-import React, { useState } from "react";
-// import { useFirestore } from "../firebase/useFirestore";
-
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "../customhooks/useForm";
 
-// const initialdoc = { name: "", phone: "" ,gender:""};
-
 function DoctorSignUp() {
   const { handlechange, handlesubmit, values } = useForm();
-  // const [doctor, setdoctor] = useState(initialdoc);
-  // const { addDoctor } = useFirestore();
-
-  // const handlechange = ({ target }) => {
-  //     setdoctor({ ...doctor, [target.name]: target.value });
-  //   };
-
-  //   const handlesubmit = async (e) => {
-  //     e.preventDefault();
-  //     await addDoctor(doctor);
-  //     setdoctor(initialdoc);
-  //   };
 
   return (
     <Container>
@@ -27,6 +10,8 @@ function DoctorSignUp() {
         <Col lg="12" className="text-center">
           <img src="" alt="Logo" />
         </Col>
+        <h2 className="text-center">SignUp</h2>
+
         <Col lg="12">
           <Form
             onSubmit={(e) => {
