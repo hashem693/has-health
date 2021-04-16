@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card,Button} from 'react-bootstrap';
 import { FaMapMarkerAlt } from "react-icons/fa";
-import '../LocationCard/locatincard.scss'; 
+import './locatincard.scss'; 
 
 
 function LocationCard() {

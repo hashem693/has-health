@@ -11,7 +11,7 @@ function Headersec() {
       <Carousel.Item className="high overlay">
         <img className="d-block w-100" src={pic1} alt="First slide" />
         <Carousel.Caption>
-          <h1>Has health</h1>
+          <h1 className="text-white">Has health</h1>
           <p className="text-white">
             Nulla vitae elit libero, a pharetra augue mollis interdum.
           </p>
@@ -21,7 +21,7 @@ function Headersec() {
         <img className="d-block w-100" src={pic2} alt="Second slide" />
 
         <Carousel.Caption>
-          <h1>Has health</h1>
+          <h1 className="text-white">Has health</h1>
           <p className="text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
@@ -31,7 +31,7 @@ function Headersec() {
         <img className="d-block w-100" src={pic3} alt="Third slide" />
 
         <Carousel.Caption>
-          <h1>Has health</h1>
+          <h1 className="text-white">Has health</h1>
           <p className="text-white">
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
