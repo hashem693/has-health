@@ -1,14 +1,16 @@
 @import '../mainDesigns/Variables.scss' ;
-
+img{
+    width: 230px;
+}
 .link {
-    color:#171D1C !important;
-    font-weight: 600;
+    color:$base3_color !important;
+    font-weight: 500;
 }
 .link:hover , .navbar-light .navbar-nav .nav-link:hover{
     color: $main2_color  !important;
 }
 .navbar-light .navbar-nav .nav-link {
-    color:#171D1C !important
+    color:$base3_color !important
 }
 .book__appointment{
     background-color: $main2_color  !important;
@@ -24,7 +26,10 @@
 }
 
 .login__icon{
-
     color: $main2_color;
     border: solid 1px $main2_color;
+    &:hover{
+        background-color: $main2_color;
+        color: $base2_color;
+    }
 }

@@ -9,3 +9,13 @@
     position: relative;
     margin: 20px auto 40px;
 }
+
+%p_lineAfter{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: $main2_color;
+    display: block;
+    position: relative;
+    margin: 5px 0px;
+}

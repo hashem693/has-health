@@ -11,8 +11,7 @@ import {
 import "../AZStyles/SignIn.scss";
 import { FaUserMd, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import SignUp from "../components/signUp/SignUp";
-
+import logo from '../assets/logo4.jpg';
 function SignIn() {
   const radios = [
     {
@@ -24,13 +23,13 @@ function SignIn() {
   ];
   const [radioValue, setRadioValue] = useState("1");
   return (
-    <Container>
-      <Row>
-        <Col lg="8" className="text-center">
-          <img src="" alt="logo" />
-          <h3>Sign in as</h3>
+    <Container className="SignIn py-5">
+      <Row className="py-3">
+        <Col lg="8" className="text-center m-auto">
+          <img src={logo} alt="logo" />
+          <h4 className="py-4">Sign In As</h4>
           <Form>
-            <ButtonGroup toggle className="my-3">
+            <ButtonGroup toggle >
               {radios.map((radio, idx) => (
                 <ToggleButton
                   key={idx}
@@ -61,7 +60,7 @@ function SignIn() {
             </Button>
             <Form.Group controlId="formBasicSignupLink">
               <Form.Text>
-                don't have an account <Link to="/signup">sign up</Link>
+                <p className="mt-4 text-muted">Don't have an account <Link className="Link" to="/signup">Sign Up</Link> </p>
               </Form.Text>
             </Form.Group>
           </Form>

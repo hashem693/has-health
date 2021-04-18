@@ -1,0 +1,36 @@
+@import '../mainDesigns/Placeholder.scss', '../mainDesigns/Variables.scss';
+.MedicalTests{
+    color: $base3_color;
+    &__header{
+        background-size: cover;
+        h2{
+            color: $base2_color;
+            background-color: rgba(23, 29, 28, 0.8);
+            @media screen and (max-width:425px){
+                font-size: 1rem;
+            }
+        }
+    }
+    &__Tabs{
+        .makeStyles-root-3{
+            width: 100% !important;
+        }
+        .MuiTab-textColorPrimary.Mui-selected  {
+            color:$main_color !important;
+        }
+        .PrivateTabIndicator-colorPrimary-5{
+            background-color: $main_color !important;
+        }
+    }
+   &__benifites{
+    &__desc{
+        p{
+            &::after{
+                @extend %p_lineAfter;
+            }
+        }
+    }
+      
+   }
+    
+}
