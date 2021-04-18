@@ -1,17 +1,18 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "../customhooks/useForm";
+import '../AZStyles/DoctorsSignUp.scss';
+import logo from '../assets/logo4.jpg';
 
 function DoctorSignUp() {
   const { handlechange, handlesubmit, values } = useForm();
 
   return (
-    <Container>
-      <Row className="mt-4">
-        <Col lg="12" className="text-center">
-          <img src="" alt="Logo" />
+    <Container className="py-5 SignUp">
+      <Row className="py-3">
+        <Col lg="12" className="text-center mb-4">
+          <img src={logo} alt="Logo" />
+          <h4 className=" py-4">Sign Up</h4>
         </Col>
-        <h2 className="text-center">SignUp</h2>
-
         <Col lg="12">
           <Form
             onSubmit={(e) => {

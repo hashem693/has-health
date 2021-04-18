@@ -1,0 +1,37 @@
+@import "../mainDesigns/Variables.scss", "../mainDesigns/Placeholder.scss";
+.Insurancesec {
+  color: $base3_color;
+  h3 {
+    &::after {
+      @extend %h2_lineAfter;
+      margin: 20px auto 30px;
+    }
+  }
+//   &__header {
+//   }
+  &__card {
+    .logo {
+      background-color: $main2_color !important;
+    }
+  }
+  &__Faq{
+    .Accordion{
+        background-color: $base2_color !important;
+        .MuiAccordionSummary-root{
+            &:hover{
+                background-color: $main2_color;
+                .makeStyles-secondaryHeading-5 ,.MuiIconButton-root {
+                    color: $base2_color !important;
+                }
+            }
+        }
+        .makeStyles-secondaryHeading-5 ,.MuiIconButton-root , li::marker{
+            color: $main_color !important;
+        }
+        .desc{
+          font-size: 14px;
+        }
+    }
+
+  }
+}

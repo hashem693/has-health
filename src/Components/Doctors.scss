@@ -1,0 +1,9 @@
+@import '../mainDesigns/Placeholder.scss' ,'../mainDesigns/Variables.scss';
+.doctors{
+    color: $base3_color;
+    h2{
+        &::after{
+            @extend %h2_lineAfter;
+        }
+    }
+}

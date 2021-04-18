@@ -8,6 +8,8 @@ import {
   FaTelegram,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+//import Logo from '../assets/logo.svg';
+
 // style={ {backgroundImage:`url(${Background})`} }
 function Footer() {
   return (
@@ -15,7 +17,7 @@ function Footer() {
       <div className="container py-5">
         <div className="row">
           <div className="col-md-3 col-sm-12 footer__about">
-            <h5 className="pb-3">Has Health</h5>
+            <h5 className="pb-3">Has-Health</h5>
             <p>
               Our medical specialists care about you & your family’s health.
             </p>

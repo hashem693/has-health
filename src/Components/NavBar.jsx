@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./NavBar.scss";
 import { FiLogIn } from "react-icons/fi";
+import Logo from "../assets/logo4.jpg";
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
@@ -14,12 +15,13 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar className="container-fluid py-3 px-3" expand="lg">
-      <Navbar.Brand>Has Health</Navbar.Brand>
-
+    <Navbar className="container-fluid px-3" expand="lg">
+      <Navbar.Brand>
+        <img className="img-fluid mr-2" src={Logo} alt="" />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="m-auto">
+        <Nav className="m-auto pt-1">
           <Nav.Link>
             <NavLink className="link text-decoration-none" to="/">
               Home
@@ -50,12 +52,12 @@ const NavBar = () => {
             </NavDropdown.Item>
             <NavDropdown.Item className="drop-item">
               <NavLink className="link text-decoration-none" to="/x-rays">
-                X-rays
+                Medical X-rays
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item className="drop-item">
               <NavLink className="link text-decoration-none" to="/tests">
-                Tests
+                Medical Tests
               </NavLink>
             </NavDropdown.Item>
           </NavDropdown>

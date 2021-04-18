@@ -4,9 +4,9 @@ import SignIn from "../../AZComponents/SignIn";
 
 function Login() {
   return (
-    <div>
+    <>
       <SignIn />
-    </div>
+    </>
   );
 }
 
