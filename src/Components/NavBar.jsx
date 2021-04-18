@@ -4,7 +4,6 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./NavBar.scss";
 import { FiLogIn } from "react-icons/fi";
 
-
 const NavBar = () => {
   const [show, setShow] = useState(false);
   const showDropdown = (e) => {
@@ -17,6 +16,7 @@ const NavBar = () => {
   return (
     <Navbar className="container-fluid py-3 px-3" expand="lg">
       <Navbar.Brand>Has Health</Navbar.Brand>
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="m-auto">
@@ -81,10 +81,10 @@ const NavBar = () => {
           </NavLink>
         </Nav.Link>
         <Nav.Link>
-            <NavLink className="link text-decoration-none" to="/login">
+          <NavLink className="link text-decoration-none" to="/login">
             <FiLogIn className="h2 login__icon rounded mt-2"></FiLogIn>
-            </NavLink>
-          </Nav.Link>
+          </NavLink>
+        </Nav.Link>
       </Navbar.Collapse>
     </Navbar>
   );

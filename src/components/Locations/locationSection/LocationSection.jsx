@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import '../LocationCard/locatincard.scss' ;
-
+import "../LocationCard/locatincard.scss";
 import LocationCard from "../LocationCard/LocationCard";
+
 function LocationSection() {
   return (
     <section className="py-5 mt-3 locationsec">

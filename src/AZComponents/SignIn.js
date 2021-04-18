@@ -10,10 +10,34 @@ import {
 } from "react-bootstrap";
 import "../AZStyles/SignIn.scss";
 import { FaUserMd, FaUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import SignUp from "../components/signUp/SignUp";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase/firebase";
+
+const initialState = { email: "", password: "" };
 
 function SignIn() {
+  const history = useHistory();
+  const [input, setInput] = useState(initialState);
+  const [error, setError] = useState("");
+
+  const handleChange = ({ target }) => {
+    setInput({
+      ...input,
+      [target.name]: target.value,
+    });
+    setError("");
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await auth.signInWithEmailAndPassword(input.email, input.password);
+      setInput(initialState);
+      history.push("/profile");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
   const radios = [
     {
       name: <FaUserMd className="h2" />,
@@ -29,7 +53,7 @@ function SignIn() {
         <Col lg="8" className="text-center">
           <img src="" alt="logo" />
           <h3>Sign in as</h3>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <ButtonGroup toggle className="my-3">
               {radios.map((radio, idx) => (
                 <ToggleButton
@@ -37,10 +61,12 @@ function SignIn() {
                   type="radio"
                   variant="white"
                   name="radio"
-                  value={radio.value}
-                  checked={radioValue === radio.value}
-                  onChange={(e) => setRadioValue(e.currentTarget.value)}
-                  className={radio.value ? "text-primary" : "text-white"}
+                  // value={radio.value}
+                  // checked={radioValue === radio.value}
+                  onChange={() => setRadioValue(radio.value)}
+                  className={
+                    radioValue == radio.value ? "text-primary" : "text-dark"
+                  }
                 >
                   {radio.name}
                   <p>{radio.title}</p>
@@ -48,10 +74,24 @@ function SignIn() {
               ))}
             </ButtonGroup>
             <Form.Group controlId="formBasicEmail">
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                value={input.email}
+                autoComplete="off"
+                onChange={handleChange}
+                name="email"
+              />
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                value={input.password}
+                autoComplete="off"
+                onChange={handleChange}
+                name="password"
+              />
             </Form.Group>
             <Form.Group controlId="formBasicPasswordForget">
               <Form.Text className="text-left">Forget Password</Form.Text>

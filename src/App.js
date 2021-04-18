@@ -16,6 +16,8 @@ import IconBreadcrumbs from "./components/IconBreadcrumbs";
 import Footer from "./components/Footer";
 import Login from "./components/Login/Login";
 import SignUp from "./components/signUp/SignUp";
+import PrivateRoute from "./context/PrivateRoute";
+import Profile from "./context/Profile";
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
           <Route path="/appointment" component={Appointment} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
+          <PrivateRoute path="/profile" component={Profile} />
         </Switch>
         <Footer />
       </div>
