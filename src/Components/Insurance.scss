@@ -17,16 +17,17 @@
   &__Faq{
     .Accordion{
         background-color: $base2_color !important;
-        .MuiAccordionSummary-root{
+        .MuiIconButton-root ,.MuiButtonBase-root ,.MuiAccordionSummary-root ,.Mui-expanded{
+          color: $main_color;
+        }
+        .MuiButtonBase-root ,.MuiAccordionSummary-root ,.Mui-expanded{
             &:hover{
                 background-color: $main2_color;
-                .makeStyles-secondaryHeading-5 ,.MuiIconButton-root {
+                color: $base2_color !important;
+                .MuiIconButton-root {
                     color: $base2_color !important;
                 }
             }
-        }
-        .makeStyles-secondaryHeading-5 ,.MuiIconButton-root , li::marker{
-            color: $main_color !important;
         }
         .desc{
           font-size: 14px;

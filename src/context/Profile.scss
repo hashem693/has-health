@@ -1,0 +1,76 @@
+@import "../mainDesigns/Placeholder.scss", "../mainDesigns/Variables.scss";
+.profile {
+  color: $base3_color;
+  // &__header{
+  //     h4{
+  //       &::after{
+  //         @extend %h2_lineAfter;
+  //         margin: 15px  auto ;
+  //         width: 45px;
+  //       }
+  //     }
+  // }
+  &__welcome {
+    span {
+      color: $main_color;
+    }
+  }
+  &__Signout {
+    text-align: right;
+    @media screen and (max-width: 767px) {
+      text-align: left;
+    }
+    button {
+      background-color: $main2_color;
+      border: none;
+      color: $base2_color;
+      &:hover {
+        background-color: $main_color;
+        color: $base2_color;
+      }
+    }
+  }
+
+  &__header {
+    p {
+      font-size: 15px;
+    }
+    &::before {
+      @extend %sec_beforeline;
+    }
+    &::after {
+      @extend %sec_beforeline;
+      width: 20%;
+      margin: 15px auto 20px;
+    }
+  }
+
+  &__detailes {
+    p {
+      &::after {
+        @extend %p_lineAfter;
+      }
+    }
+  }
+  &__appointment {
+    .card-header,button {
+        background-color: $base_color !important;
+    }
+    button{
+        border: none !important;
+        color: $main2_color !important;
+        &:hover{
+            border: none !important;
+            color: $main_color !important;
+        }
+    }
+      
+    span {
+      color: $main2_color;
+      font-size: 17px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+}

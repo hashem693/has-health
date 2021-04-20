@@ -15,18 +15,30 @@
         .makeStyles-root-3{
             width: 100% !important;
         }
-        .MuiTab-textColorPrimary.Mui-selected  {
+        .MuiTab-textColorPrimary.Mui-selected ,.MedicalTests__Tabs .MuiTab-textColorPrimary {
             color:$main_color !important;
         }
-        .PrivateTabIndicator-colorPrimary-5{
+
+        .PrivateTabIndicator-colorPrimary-5 , .PrivateTabIndicator-colorPrimary-4{
             background-color: $main_color !important;
+        }
+        .MuiTab-textColorPrimary{
+            color:$base3_color !important;
         }
     }
    &__benifites{
     &__desc{
-        p{
+        .ben{
             &::after{
                 @extend %p_lineAfter;
+            }
+        }
+
+        .Link{
+            color: $base2_color !important;
+            background-color: $main2_color !important;
+            &:hover{
+                background-color: $main_color !important;
             }
         }
     }

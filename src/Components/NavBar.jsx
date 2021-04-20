@@ -64,12 +64,12 @@ const NavBar = () => {
           <Nav.Link>
             <NavLink className="link text-decoration-none" to="/insurance">
               Insurance
-            </NavLink>{" "}
+            </NavLink>
           </Nav.Link>
           <Nav.Link>
             <NavLink className="link text-decoration-none" to="/awareness">
               Awareness
-            </NavLink>{" "}
+            </NavLink>
           </Nav.Link>
           <Nav.Link>
             <NavLink className="link text-decoration-none" to="/contactus">

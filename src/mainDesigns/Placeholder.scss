@@ -17,5 +17,14 @@
     background-color: $main2_color;
     display: block;
     position: relative;
-    margin: 5px 0px;
+    margin: 5px 0px 25px;
+}
+%sec_beforeline{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $base_color;
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
 }

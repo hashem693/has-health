@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
-    color: theme.palette.text.secondary,
+    //color: theme.palette.text.secondary,
   },
 }));
 
@@ -42,7 +42,7 @@ export default function InsuranceFaq() {
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               Why doesn’t Has-Heath Integrative Medicine accept my Insurance?
             </Typography>
           </AccordionSummary>
@@ -74,7 +74,7 @@ export default function InsuranceFaq() {
             aria-controls="panel2bh-content"
             id="panel2bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               Does my Insurance cover Has-Health Executive Health Packages?
             </Typography>
           </AccordionSummary>
@@ -101,7 +101,7 @@ export default function InsuranceFaq() {
             aria-controls="panel3bh-content"
             id="panel3bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               Does the Has-Health Integrative Medicine accept insurance for my
               labs, ultrasounds and X-rays?
             </Typography>
@@ -145,7 +145,7 @@ export default function InsuranceFaq() {
             aria-controls="panel4bh-content"
             id="panel4bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               Does Novomed offer financing?
             </Typography>
           </AccordionSummary>
@@ -185,7 +185,7 @@ export default function InsuranceFaq() {
             aria-controls="panel5bh-content"
             id="panel5bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               Does my medical insurance cover the cost of supplements?
             </Typography>
           </AccordionSummary>
@@ -217,7 +217,7 @@ export default function InsuranceFaq() {
             aria-controls="panel6bh-content"
             id="panel6bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               I feel like my insurance company is exhausting me with denials and
               requests for more information. Is there anyone to help me?
             </Typography>
@@ -250,7 +250,7 @@ export default function InsuranceFaq() {
             aria-controls="panel7bh-content"
             id="panel7bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               I usually file my own claims, but sometimes I ask Novomed to file
               my claims for me. When I do, my claims seem to get paid faster,
               while those I file are processed more slowly and sometimes get
@@ -284,7 +284,7 @@ export default function InsuranceFaq() {
             aria-controls="panel8bh-content"
             id="panel8bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
               Does Has-Health offer financing?
             </Typography>
           </AccordionSummary>
@@ -324,7 +324,7 @@ export default function InsuranceFaq() {
             aria-controls="panel9bh-content"
             id="panel9bh-header"
           >
-            <Typography className={classes.secondaryHeading}>
+            <Typography >
             What should I ask my insurance company when I inquire about my out-of-network benefits?
             </Typography>
           </AccordionSummary>
