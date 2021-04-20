@@ -1,7 +1,6 @@
 import React from "react";
 import "../MedicalTests.scss";
 import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -10,13 +9,14 @@ import card1 from "../../assets/card_01.jpg";
 import card2 from "../../assets/card_02.jpg";
 import card3 from "../../assets/card_03.jpg";
 import card4 from "../../assets/card_04.jpg";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
   media: {
-    paddingTop: "90%", // 16:9
+    paddingTop: "85%", // 16:9
   },
   expand: {
     transform: "rotate(0deg)",
@@ -38,7 +38,7 @@ function TestsBenifites() {
         <div className="col-md-6 col-sm-12  MedicalTests__benifites__imgs py-4">
           <div className="row">
             <div className="col-md-6 col-sm-12">
-              <Card className="py-3" className={classes.root}>
+              <Card >
                 <CardMedia
                   className="img-fluid"
                   className={classes.media}
@@ -57,7 +57,7 @@ function TestsBenifites() {
               </Card>
             </div>
             <div className="col-md-6 col-sm-12">
-              <Card className="py-3" className={classes.root}>
+              <Card>
                 <CardMedia
                   className="img-fluid"
                   className={classes.media}
@@ -75,8 +75,9 @@ function TestsBenifites() {
                 </CardContent>
               </Card>
             </div>
-            <div className="col-md-6 col-sm-12 mt-4">
-              <Card className="py-3" className={classes.root}>
+            <div className="col-md-6 col-sm-12 mt-3">
+              <Card 
+              >
                 <CardMedia
                   className="img-fluid"
                   className={classes.media}
@@ -94,8 +95,8 @@ function TestsBenifites() {
                 </CardContent>
               </Card>
             </div>
-            <div className="col-md-6 col-sm-12 mt-4">
-              <Card className="py-3" className={classes.root}>
+            <div className="col-md-6 col-sm-12 mt-3">
+              <Card >
                 <CardMedia
                   className="img-fluid"
                   className={classes.media}
@@ -116,18 +117,36 @@ function TestsBenifites() {
           </div>
         </div>
         <div className="col-md-6 col-sm-12  MedicalTests__benifites__desc py-4">
-          <p>BENEFITS</p>
+          <p className="ben">BENEFITS</p>
           <h3>We'll Ensure You Always get the Best Results</h3>
+          <p className="pt-3">
+            Your full-service lab for Has-Health trials. Our mission is to
+            ensure the generation of accurate.
+          </p>
+          <p className="py-1">Our firm is expert to create an efficient user interface that.</p>
           <p>
-            Your full-service lab for clinical trials. Our mission is to ensure
-            the generation of accurate.
+            The Microbiology Laboratory is composed of several sections
+            including Aerobic and Anaerobic Bacteriology, Mycology,
+            Parasitology, Mycobacteriology. Monday to Friday, 7 am – 5 pm.
+          </p>
+          <p className="mt-4">
+            Has-Health is registered with the following governmental agencies:
           </p>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Drug Enforcement Agency (DEA) No. RG0105216</li>
+            <li>Food and Drug Administration (FDA) No. 2182801</li>
+            <li>International Standards Organization (ISO9001 and ISO17025)</li>
+            <li>United States Department of Agriculture (USDA) No. 35-R-034</li>
           </ul>
+          <div className="mt-5">
+            <Link
+              className="text-decoration-none px-4 py-3 rounded Link"
+              variant="contained"
+              to="/about"
+            >
+              All Services
+            </Link>
+          </div>
         </div>
       </div>
     </section>
