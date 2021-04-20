@@ -53,9 +53,9 @@ function SignIn() {
       <Row className="py-3">
         <Col lg="8" className="text-center m-auto">
           <img src={logo} alt="logo" />
-          <h3 className="py-4">Sign in as</h3>
+          <h3 className="py-4">Sign in</h3>
           <Form onSubmit={handleSubmit}>
-            <ButtonGroup toggle className="my-3">
+            {/* <ButtonGroup toggle className="my-3">
               {radios.map((radio, idx) => (
                 <ToggleButton
                   key={idx}
@@ -73,7 +73,7 @@ function SignIn() {
                   <p>{radio.title}</p>
                 </ToggleButton>
               ))}
-            </ButtonGroup>
+            </ButtonGroup> */}
             <Form.Group controlId="formBasicEmail">
               <Form.Control
                 type="email"
