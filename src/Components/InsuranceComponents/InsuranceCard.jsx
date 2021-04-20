@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function InsuranceCard() {
+export default function InsuranceCard({ name, discount }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -51,23 +51,25 @@ export default function InsuranceCard() {
 
   return (
     <div className="py-4 Insurancesec__card">
-    <Card  className={classes.root}>
-        <CardHeader 
-          avatar={<Avatar className="logo" aria-label="recipe">C</Avatar>}
+      <Card className={classes.root}>
+        <CardHeader
+          avatar={
+            <Avatar className="logo" aria-label="recipe">
+              {name.charAt(0)}
+            </Avatar>
+          }
           action={
             <IconButton aria-label="settings">
               <MoreVertIcon />
             </IconButton>
           }
-          title="Comprehensive health insurance"
-          subheader="September 14, 2016"
+          title={name}
         />
         <CardMedia className={classes.media} image={img} title="Paella dish" />
         <CardContent className="mt-2">
-          <Typography variant="body2" color="textMuted" component="p">
-            This impressive paella is a perfect party dish and a fun meal to
-            cook together with your guests. Add 1 cup of frozen peas along with
-            the mussels, if you like.
+          <Typography paragraph>Offer:</Typography>
+          <Typography variant="body3" color="textMuted" component="p">
+            {discount} discount
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
@@ -84,10 +86,11 @@ export default function InsuranceCard() {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Method:</Typography>
+            <Typography paragraph>Description:</Typography>
             <Typography>
-              Set aside off of the heat to let rest for 10 minutes, and then
-              serve.
+              have a long and successful track record in the Egyptian Insurance
+              market, providing comprehensive and integrated insurance services
+              to business partners and individuals
             </Typography>
           </CardContent>
         </Collapse>

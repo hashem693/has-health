@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useFirestore } from "../firebase/useFirestore";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase/firebase";
 
 const initialState = {
   firstName: "",
@@ -11,9 +13,23 @@ const initialState = {
   specialist: "",
 };
 
+const authinitialState = { email: "", password: "", confirmPassword: "" };
+
 export const useForm = () => {
   const [values, setvalues] = useState(initialState);
   const { addDoctor } = useFirestore();
+
+  const history = useHistory();
+  const [input, setInput] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChange2 = ({ target }) => {
+    setInput({
+      ...input,
+      [target.name]: target.value,
+    });
+    setError("");
+  };
 
   const handlechange = ({ target }) => {
     setvalues({ ...values, [target.name]: target.value });
@@ -23,6 +39,14 @@ export const useForm = () => {
     e.preventDefault();
     await addDoctor(values, usertype);
     setvalues(initialState);
+    try {
+      await auth.createUserWithEmailAndPassword(input.email, input.password);
+      setInput(authinitialState);
+      history.push("/");
+    } catch (err) {
+      setError(err.message);
+    }
   };
-  return { handlechange, handlesubmit, values };
+
+  return { handlechange, handlesubmit, values, input, handleChange2 };
 };

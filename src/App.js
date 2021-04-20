@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 import "./App.scss";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
@@ -18,8 +23,11 @@ import Login from "./components/Login/Login";
 import SignUp from "./components/signUp/SignUp";
 import PrivateRoute from "./context/PrivateRoute";
 import Profile from "./context/Profile";
+import { AuthContext } from "./context/Auth";
+import { useContext } from "react";
 
 function App() {
+  const { user } = useContext(AuthContext);
   return (
     <Router>
       <div className="App">

@@ -1,10 +1,19 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "../customhooks/useForm";
-import '../AZStyles/DoctorsSignUp.scss';
-import logo from '../assets/logo4.jpg';
+import "../AZStyles/DoctorsSignUp.scss";
+import logo from "../assets/logo4.jpg";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase/firebase";
+import { useState } from "react";
 
 function DoctorSignUp() {
-  const { handlechange, handlesubmit, values } = useForm();
+  const {
+    handlechange,
+    handlesubmit,
+    values,
+    input,
+    handleChange2,
+  } = useForm();
 
   return (
     <Container className="py-5 SignUp">
@@ -117,14 +126,28 @@ function DoctorSignUp() {
               </Col>
               <Col lg="6" md="10">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Control type="email" placeholder="Email *" />
+                  <Form.Control
+                    type="email"
+                    placeholder="Email *"
+                    value={input.email}
+                    autoComplete="off"
+                    onChange={handleChange2}
+                    name="email"
+                  />
                 </Form.Group>
               </Col>
             </Form.Row>
             <Form.Row>
               <Col lg="6" md="10">
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Control type="password" placeholder="Password *" />
+                  <Form.Control
+                    type="password"
+                    placeholder="Password *"
+                    value={input.password}
+                    autoComplete="off"
+                    onChange={handleChange2}
+                    name="password"
+                  />
                 </Form.Group>
               </Col>
               <Col lg="6" md="10">
