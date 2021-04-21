@@ -2,7 +2,12 @@
 .MedicalTests {
   color: $base3_color;
   &__header {
+    background-position: center;
     background-size: cover;
+    height:550px;
+    .head{
+      top: 40%;
+    }
     h2 {
       color: $base2_color;
       background-color: rgba(23, 29, 28, 0.8);

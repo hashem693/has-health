@@ -30,11 +30,11 @@
     }
     &__bg{
         color: $base2_color;
-        height: 430px;
+        height:550px;
         background-size: cover;
         &__caption{
             right: 20%;            
-            top: 50%;
+            top: 60%;
             @media screen and (max-width:320px) {
                 right: 10%;                
             }

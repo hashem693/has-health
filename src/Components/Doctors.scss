@@ -6,4 +6,22 @@
             @extend %h2_lineAfter;
         }
     }
+    &__header{
+        color: $base2_color;
+        height:550px;
+        background-size: cover;
+        &__caption{            
+            top: 50%;
+            left:42%;
+            @media screen and (max-width:425px) {
+                left: 20%;                
+            }
+            @media screen and (max-width:425px) {
+                left: 5%;                
+            }
+            p{
+                background-color: rgba(23, 29, 28, 0.9);
+            }
+        }
+    }
 }

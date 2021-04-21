@@ -3,9 +3,11 @@ import { useContext, useState } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./NavBar.scss";
 import { FiLogIn } from "react-icons/fi";
+import { FaUserCircle } from "react-icons/fa";
 import Logo from "../assets/logo4.jpg";
 import { AuthContext } from "../context/Auth";
 import { auth } from "../firebase/firebase";
+import { Link } from "@material-ui/core";
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
@@ -80,30 +82,38 @@ const NavBar = () => {
             </NavLink>
           </Nav.Link>
         </Nav>
-        <Nav.Link className="btn book__appointment">
+        <Nav.Link className="btn btn-outline-primary book__appointment">
           <NavLink className="link text-decoration-none" to="/appointment">
             Book an Appointment
           </NavLink>
         </Nav.Link>
-        <Nav.Link>
-          {user ? (
-            <div className="profile__Signout col-md-6 col-sm-12 ">
-              <button className="btn" onClick={() => auth.signOut()}>
-                Sign Out
-              </button>
-            </div>
-          ) : (
-            <NavLink className="link text-decoration-none" to="/login">
-              sign in
-              <FiLogIn className="h2 login__icon rounded mt-2"></FiLogIn>
+        {user ? (
+          <Nav.Link>
+            <Link to="/"
+              className="btn profile__Signout btn-primary text-decoration-none"
+              onClick={() => auth.signOut()}
+            >
+              Sign Out <FiLogIn className=" login__icon rounded" />
+            </Link>
+          </Nav.Link>
+        ) : (
+          <Nav.Link>
+            <NavLink
+              className="profile__SignIn py-2 px-4 btn btn-primary text-decoration-none"
+              to="/login"
+            >
+              Sign In
+              {/* <FiLogIn className="h2 login__icon rounded mt-2"></FiLogIn> */}
             </NavLink>
-          )}
-          {user?.email == "has@gmail.com" && (
+          </Nav.Link>
+        )}
+        {user?.email == "has@gmail.com" && (
+          <Nav.Link>
             <NavLink className="link text-decoration-none" to="/profile">
-              profile
+              <FaUserCircle className="h3 mt-2" />
             </NavLink>
-          )}
-        </Nav.Link>
+          </Nav.Link>
+        )}
       </Navbar.Collapse>
     </Navbar>
   );

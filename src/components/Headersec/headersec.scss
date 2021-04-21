@@ -1,9 +1,33 @@
 @import './../../mainDesigns/Variables.scss' , './../../mainDesigns/Placeholder.scss';
 
-.high {
-  height: 500px;
+// .high {
+//   height: 700px;
+// }
+.caption{
+  top: 30%;
+  @media screen and (max-width:585px){
+    top: 20%;
+  }
+  @media screen and (max-width:585px){
+    top: 5%;
+  }
+  h1{
+    @media screen and (max-width:768px){
+      font-size: 3.5rem;
+    }
+    @media screen and (max-width:425px){
+      font-size: 2.5rem;
+    }
+  }
+  h2{
+    @media screen and (max-width:768px){
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width:768px){
+    font-size: 1rem;
+  }
 }
-
+}
 .overlay {
   &::after {
     display: block;

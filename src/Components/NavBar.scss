@@ -14,24 +14,30 @@ img {
   color: $base3_color !important;
 }
 .book__appointment {
-  background-color: $main2_color !important;
+  border-color: $main2_color !important;
+  color: $base3_color !important;
 }
-.book__appointment:hover {
-  background-color: $main_color !important;
+.book__appointment:hover{
+    background-color: $main2_color!important;
+    .link {
+
+      color: $base2_color !important;
+    }
 }
-.book__appointment .link {
-  color: $base2_color !important;
-}
+
 .drop-item:active,
 .drop-item:hover {
   background-color: $base2_color !important;
 }
 
-.login__icon {
-  color: $main2_color;
-  // border: solid 1px $main2_color;
-  //   &:hover {
-  //     background-color: $main2_color;
-  //     color: $base2_color;
-  //   }
+.profile__SignIn , .profile__Signout   {
+  background-color: $main2_color !important;
+  border: none !important;
+  font-weight: 500;
+  &:hover{
+    background-color: $main_color !important;
+  }
+}
+.profile__Signout{
+  color: $base2_color !important;
 }
