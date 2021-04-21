@@ -47,7 +47,9 @@ function App() {
           <Route path="/appointment" component={Appointment} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
-          <PrivateRoute path="/profile" component={Profile} />
+          {user?.email == "has@gmail.com" && (
+            <PrivateRoute path="/profile" component={Profile} />
+          )}
         </Switch>
         <Footer />
       </div>

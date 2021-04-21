@@ -117,12 +117,6 @@ const Profile = () => {
           </p>
         </div>
 
-        <div className="profile__Signout col-md-6 col-sm-12 ">
-          <button className="btn" onClick={() => auth.signOut()}>
-            Sign Out
-          </button>
-        </div>
-
         <div className="profile__header col-md-12 py-3 text-center ">
           <h4>Appointments At All Our Branches</h4>
           <p className="pt-2 text-muted">
@@ -156,17 +150,21 @@ const Profile = () => {
             {appoints.map((appoint, i) => (
               <Card>
                 <Card.Header>
-                  <Accordion.Toggle
-                    eventKey={i + 1}                   
-                  >
+                  <Accordion.Toggle eventKey={i + 1}>
                     {appoint.day}
                   </Accordion.Toggle>
                 </Card.Header>
-                <Accordion.Collapse eventKey={i + 1}  className="pl-4">
+                <Accordion.Collapse eventKey={i + 1} className="pl-4">
                   <Card.Body>
-                    <p><span>Branch:</span> {appoint.location}</p>
-                    <p><span>Specialist:</span> {appoint.specialist}</p>
-                    <p><span>Time:</span> {appoint.time}</p>
+                    <p>
+                      <span>Branch:</span> {appoint.location}
+                    </p>
+                    <p>
+                      <span>Specialist:</span> {appoint.specialist}
+                    </p>
+                    <p>
+                      <span>Time:</span> {appoint.time}
+                    </p>
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>

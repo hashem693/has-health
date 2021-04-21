@@ -1,35 +1,37 @@
-@import '../mainDesigns/Variables.scss' ;
-img{
-    width: 230px;
+@import "../mainDesigns/Variables.scss";
+img {
+  width: 230px;
 }
 .link {
-    color:$base3_color !important;
-    font-weight: 500;
+  color: $base3_color !important;
+  font-weight: 500;
 }
-.link:hover , .navbar-light .navbar-nav .nav-link:hover{
-    color: $main2_color  !important;
+.link:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $main2_color !important;
 }
 .navbar-light .navbar-nav .nav-link {
-    color:$base3_color !important
+  color: $base3_color !important;
 }
-.book__appointment{
-    background-color: $main2_color  !important;
+.book__appointment {
+  background-color: $main2_color !important;
 }
-.book__appointment:hover{
-    background-color: $main_color  !important;
+.book__appointment:hover {
+  background-color: $main_color !important;
 }
-.book__appointment .link{
-    color:$base2_color !important
+.book__appointment .link {
+  color: $base2_color !important;
 }
-.drop-item:active , .drop-item:hover{
-    background-color: $base2_color !important
+.drop-item:active,
+.drop-item:hover {
+  background-color: $base2_color !important;
 }
 
-.login__icon{
-    color: $main2_color;
-    border: solid 1px $main2_color;
-    &:hover{
-        background-color: $main2_color;
-        color: $base2_color;
-    }
+.login__icon {
+  color: $main2_color;
+  // border: solid 1px $main2_color;
+  //   &:hover {
+  //     background-color: $main2_color;
+  //     color: $base2_color;
+  //   }
 }

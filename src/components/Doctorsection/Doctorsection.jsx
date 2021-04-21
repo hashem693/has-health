@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { db } from "../../firebase/firebase";
 import Card1 from "../Card/Card1";
 import "../Card/Card1.scss";
+import { NavLink } from "react-router-dom";
 
 function Doctorsection() {
   const [doctorsthree, setdoctorsthree] = useState([]);
@@ -35,7 +36,9 @@ function Doctorsection() {
           ))}
         </div>
         <div className="text-center">
-          <Button className="px-4 py-2 viewbtn">View All</Button>
+          <NavLink to="/doctors">
+            <Button className="px-4 py-2 viewbtn">View All</Button>
+          </NavLink>
         </div>
       </div>
     </section>

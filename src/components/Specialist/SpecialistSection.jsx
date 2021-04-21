@@ -8,9 +8,9 @@ function SpecialistSection() {
       <h2 className="text-center">Specialties</h2>
       <div className="container pt-3 pb-5">
         <div className="row">
-          <SpecialistCard />
-          <SpecialistCard />
-          <SpecialistCard />
+          <SpecialistCard name="Bones" />
+          <SpecialistCard name="Teeth" />
+          <SpecialistCard name="Brain & Nerves" />
         </div>
       </div>
     </section>

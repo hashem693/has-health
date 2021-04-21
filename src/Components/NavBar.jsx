@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./NavBar.scss";
 import { FiLogIn } from "react-icons/fi";
 import Logo from "../assets/logo4.jpg";
+import { AuthContext } from "../context/Auth";
+import { auth } from "../firebase/firebase";
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
@@ -13,6 +15,7 @@ const NavBar = () => {
   const hideDropdown = (e) => {
     setShow(false);
   };
+  const { user } = useContext(AuthContext);
 
   return (
     <Navbar className="container-fluid px-3" expand="lg">
@@ -83,9 +86,23 @@ const NavBar = () => {
           </NavLink>
         </Nav.Link>
         <Nav.Link>
-          <NavLink className="link text-decoration-none" to="/login">
-            <FiLogIn className="h2 login__icon rounded mt-2"></FiLogIn>
-          </NavLink>
+          {user ? (
+            <div className="profile__Signout col-md-6 col-sm-12 ">
+              <button className="btn" onClick={() => auth.signOut()}>
+                Sign Out
+              </button>
+            </div>
+          ) : (
+            <NavLink className="link text-decoration-none" to="/login">
+              sign in
+              <FiLogIn className="h2 login__icon rounded mt-2"></FiLogIn>
+            </NavLink>
+          )}
+          {user?.email == "has@gmail.com" && (
+            <NavLink className="link text-decoration-none" to="/profile">
+              profile
+            </NavLink>
+          )}
         </Nav.Link>
       </Navbar.Collapse>
     </Navbar>

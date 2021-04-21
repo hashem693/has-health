@@ -14,23 +14,59 @@ function LocationSection() {
       >
         <Carousel.Item>
           <div className="d-flex justify-content-center my-3">
-            <LocationCard></LocationCard>
-            <LocationCard></LocationCard>
-            <LocationCard></LocationCard>
+            <LocationCard
+              name="alexandria branch"
+              address="6th floor somoha street"
+              phone="0345648697"
+            ></LocationCard>
+            <LocationCard
+              name="cairo branch"
+              address="6th nile street"
+              phone="024657879"
+            ></LocationCard>
+            <LocationCard
+              name="tanta branch"
+              address="1st floor kafr street"
+              phone="0487985413"
+            ></LocationCard>
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="d-flex justify-content-center my-3">
-            <LocationCard></LocationCard>
-            <LocationCard></LocationCard>
-            <LocationCard></LocationCard>
+            <LocationCard
+              name="alexandria branch"
+              address="6th floor somoha street"
+              phone="0345648697"
+            ></LocationCard>
+            <LocationCard
+              name="cairo branch"
+              address="6th nile street"
+              phone="024657879"
+            ></LocationCard>
+            <LocationCard
+              name="tanta branch"
+              address="1st floor kafr street"
+              phone="0487985413"
+            ></LocationCard>
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="d-flex justify-content-center my-3">
-            <LocationCard></LocationCard>
-            <LocationCard></LocationCard>
-            <LocationCard></LocationCard>
+            <LocationCard
+              name="tanta branch"
+              address="1st floor kafr street"
+              phone="0487985413"
+            ></LocationCard>
+            <LocationCard
+              name="cairo branch"
+              address="6th nile street"
+              phone="024657879"
+            ></LocationCard>
+            <LocationCard
+              name="alexandria branch"
+              address="6th floor somoha street"
+              phone="0345648697"
+            ></LocationCard>
           </div>
         </Carousel.Item>
       </Carousel>
