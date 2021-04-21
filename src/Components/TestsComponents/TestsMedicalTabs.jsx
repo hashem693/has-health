@@ -68,7 +68,7 @@ export default function TestsMedicalTabs() {
 
   return (
     <section className="MedicalTests__Tabs m-auto container py-5">
-      <div className="w-100">
+      <div className="w-100 py-3">
         <div className={classes.root}>
           <AppBar position="static" color="default">
             <Tabs
