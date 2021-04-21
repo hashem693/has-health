@@ -27,7 +27,7 @@ function Insurance() {
         <h3 className="text-center">Insurance Providers </h3>
         <div className="row">
           {insurance.map((insure) => (
-            <div className="col-md-4 col-sm-12">
+            <div className="col-lg-3 col-md-6 col-sm-12">
               <InsuranceCard name={insure.name} discount={insure.discount} />
             </div>
           ))}
