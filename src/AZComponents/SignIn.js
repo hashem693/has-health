@@ -94,10 +94,7 @@ function SignIn() {
                 name="password"
               />
             </Form.Group>
-            <Form.Group controlId="formBasicPasswordForget">
-              <Form.Text className="text-left">Forget Password</Form.Text>
-            </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button className="mt-3 px-4 py-2" variant="primary" type="submit">
               Sign In
             </Button>
             <Form.Group controlId="formBasicSignupLink">

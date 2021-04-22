@@ -1,9 +1,11 @@
+@import '../mainDesigns/Placeholder.scss' , '../mainDesigns/Variables.scss';
+
 .IconBreadcrumbs{
-    background-color: #22A7F0;
+    background-color: $main_color;
     .MuiTypography-colorTextPrimary , .MuiTypography-colorInherit{
-        color: #FFFBFA !important;
+        color: $base_color !important;
     }
     .MuiTypography-colorTextSecondary{
-        color: #EFE9F4 !important;
+        color: $base_color !important;
     }
 }

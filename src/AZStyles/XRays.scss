@@ -1,0 +1,109 @@
+#XraysPContainer{
+    &>.row{
+        &:nth-of-type(-n+3){
+            background-color: #efefef; 
+            border-radius: 0.5rem; 
+            padding: 1.5rem 0rem;
+        }
+        &:nth-of-type(1), &:nth-of-type(3) {
+            .col-lg-4{
+                img{
+                    margin-left: -2.5rem;
+                    border-radius: 2rem 0rem 0rem 1rem;
+                }
+            }
+            .col-lg-8{
+                margin-left: -2rem;
+                padding-right: 4rem;
+                h3{}
+                p{ font-size: 1.1rem; }
+            }
+        }
+        &:nth-of-type(2) {
+            .col-sm-8{
+                img{
+                    margin-left: -2.5rem; 
+                    border-radius: 2rem 0rem 0rem 1rem;
+                }
+            }
+            .col-lg-4{
+                img{
+                    margin-left: 2.5rem; 
+                    border-radius: 0rem 2rem 1rem 0rem;
+                }
+            }
+            .col-lg-8{
+                margin-right: -2rem;
+                padding-left: 4rem;
+                h3{}
+                p{ font-size: 1.1rem; }
+            }
+        }
+    }
+}
+
+$tablet-res: 768px;      $phone-res: 576px;
+// 768 up = md , lg = min-width     767 down = sm , xs = max-width
+
+@media (max-width: $tablet-res) {
+    #XraysPContainer{
+        &>.row{ 
+            &:nth-of-type(-n+3) {
+                img{
+                        margin-top: -2.5rem!important;
+                        margin-left: 0!important;
+                        margin-bottom: 2rem;
+                        border-radius: 1.5rem 1.5rem 0rem 0rem!important;
+                }                
+                .col-lg-8{
+                    margin: 0!important;
+                    padding: 0!important;         
+                }
+            }    
+        }
+    }
+}
+
+@media (min-width: $tablet-res) {
+    #XraysPContainer{
+        &>.row{ 
+            &:nth-of-type(1), &:nth-of-type(3) {
+                .col-lg-4{
+                    img{
+                        margin-left: -2.5rem;
+                        border-radius: 2rem 0rem 0rem 1rem;
+                    }
+                }
+                .col-lg-8{
+                    margin-left: -2rem;
+                    padding-right: 4rem;         
+                }
+            }
+            &:nth-of-type(2) {      
+                .col-lg-4{
+                    img{
+                        margin-left: 2.5rem; 
+                        border-radius: 0rem 2rem 1rem 0rem;
+                    }
+                }
+                .col-lg-8{
+                    margin-right: -2rem;
+                    padding-left: 4rem;          
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-res) and (max-width: 992px){
+    #XraysPContainer{
+        &>.row{ 
+            &:nth-of-type(-n+3){
+                    img{
+                        margin-top: 12.5%!important;
+                        height: 75%!important;
+                    }
+            }
+        }
+    }
+}
