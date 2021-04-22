@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { useContext, useState } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./NavBar.scss";
@@ -10,6 +10,7 @@ import { auth } from "../firebase/firebase";
 import { Link } from "@material-ui/core";
 
 const NavBar = () => {
+  const history = useHistory();
   const [show, setShow] = useState(false);
   const showDropdown = (e) => {
     setShow(!show);
@@ -89,9 +90,13 @@ const NavBar = () => {
         </Nav.Link>
         {user ? (
           <Nav.Link>
-            <Link to="/"
+            <Link
+              to="/"
               className="btn profile__Signout btn-primary text-decoration-none"
-              onClick={() => auth.signOut()}
+              onClick={async () => {
+                await auth.signOut();
+                history.push("/");
+              }}
             >
               Sign Out <FiLogIn className=" login__icon rounded" />
             </Link>
