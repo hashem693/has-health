@@ -1,10 +1,9 @@
 import React from 'react'
+import XRays from '../AZComponents/XRays'
 
 function MedicalXrays() {
     return (
-        <div>
-            xrays
-        </div>
+        <XRays />
     )
 }
 

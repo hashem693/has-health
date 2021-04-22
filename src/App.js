@@ -1,6 +1,5 @@
 import {
   BrowserRouter as Router,
-  Redirect,
   Route,
   Switch,
 } from "react-router-dom";
@@ -26,6 +25,8 @@ import Profile from "./context/Profile";
 import { AuthContext } from "./context/Auth";
 import { useContext } from "react";
 import Scroll from "./components/ScollUp/Scroll";
+
+
 
 function App() {
   const { user } = useContext(AuthContext);

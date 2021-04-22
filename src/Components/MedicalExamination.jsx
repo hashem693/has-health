@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Examination from '../AZComponents/Examination';
 
 function MedicalExamination() {
     return (
-        <div>
-            MedicalExamination page
-        </div>
+        <Examination />
     )
 }
 
