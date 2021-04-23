@@ -28,7 +28,7 @@ function Doctorsection() {
         <div className="row justify-content-center">
           {doctorsthree.map((doctor) => (
             <Card1
-              firstName={doctor.firstName}
+              firstName={"Dr/ " +doctor.firstName}
               lastname={doctor.lastname}
               specialist={doctor.specialist}
               key={doctor.id}

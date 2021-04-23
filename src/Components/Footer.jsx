@@ -26,11 +26,12 @@ function Footer() {
             </p>
             <p>Be carefull for yourself.</p>
             <ul className="list-unstyled">
-              <li>
-                <span>Email: </span>has-health@gmail.com
+              <li>Email:
+                <span> has-health@gmail.com </span>
               </li>
               <li>
-                <span>Phone: </span>0282506458
+              Phone:
+                <span> 0282506458 </span>
               </li>
             </ul>
           </div>
@@ -85,19 +86,19 @@ function Footer() {
             <h5 className="pb-3">Follow Us</h5>
             <ul className="list-unstyled d-flex">
               <li className="mr-2">
-                <FaFacebook></FaFacebook>
+                <FaFacebook />
               </li>
               <li className="mr-2">
-                <FaYoutube></FaYoutube>
+                <FaYoutube />
               </li>
               <li className="mr-2">
-                <FaTwitter></FaTwitter>
+                <FaTwitter />
               </li>
               <li className="mr-2">
-                <FaWhatsapp></FaWhatsapp>
+                <FaWhatsapp />
               </li>
               <li className="mr-2">
-                <FaTelegram></FaTelegram>
+                <FaTelegram />
               </li>
             </ul>
           </div>

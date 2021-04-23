@@ -21,7 +21,7 @@ function Testimonials() {
               I work hard to stay slim and yet cellulite has been my curse for years.  I have wasted so much money on useless treatments. I know that many factors can contribute to cellulite formation, but ZWave has worked for me, smoothening the back of my thighs like nothing else I’ve ever tried. There’s no downtime, no pain. I’m now on a maintenance plan that’s sensible and affordable.
               </p>
               <img src={testemonial1} alt="" />
-              <p className="mt-3">Hashem Mohamed</p>
+              <p className="mt-3 font-italic">Hashem Mohamed</p>
             </div>
           </Carousel.Item>
           <Carousel.Item className="Testimonials__item text-center">
@@ -30,7 +30,7 @@ function Testimonials() {
               Nobody ever explained the difference between botox and fillers until I came to Novomed Aesthetica.  Although they complement each other, they are not interchangeable. After an excellent consultation, I was given Botox to relax muscles that cause facial wrinkles, while fillers restored volume to my cheeks and around my mouth. I look better and am also better informed.
               </p>
               <img src={testemonial1} alt="" />
-              <p className="mt-3">Mahmoud Taha</p>
+              <p className="mt-3 font-italic">Mahmoud Taha</p>
             </div>
           </Carousel.Item>
           <Carousel.Item className="Testimonials__item text-center">
@@ -39,7 +39,7 @@ function Testimonials() {
               I work hard to stay slim and yet cellulite has been my curse for years. I have wasted so much money on useless treatments. I know that many factors can contribute to cellulite formation, but ZWave has worked for me, smoothening the back of my thighs like nothing else I’ve ever tried. There’s no downtime, no pain. I’m now on a maintenance plan that’s sensible and affordable.
               </p>
               <img src={testemonial1} alt="" />
-              <p className="mt-3">Ahmed Zakaria</p>
+              <p className="mt-3 font-italic">Mohamed Ahmed</p>
             </div>
           </Carousel.Item>
         </Carousel>
