@@ -16,5 +16,6 @@ export const useFirestore = () => {
   const addDoctor = async (doctor, usertype) => {
     await db.collection(usertype).add({ ...doctor });
   };
+
   return { doctors, addDoctor };
 };

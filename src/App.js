@@ -1,5 +1,6 @@
 import {
   BrowserRouter as Router,
+  Redirect,
   Route,
   Switch,
 } from "react-router-dom";
@@ -25,8 +26,7 @@ import Profile from "./context/Profile";
 import { AuthContext } from "./context/Auth";
 import { useContext } from "react";
 import Scroll from "./components/ScollUp/Scroll";
-
-
+import Patientpro from "./context/Patientpro";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -47,10 +47,24 @@ function App() {
           <Route path="/X-rays" component={MedicalXrays} />
           <Route path="/tests" component={MedicalTests} />
           <Route path="/appointment" component={Appointment} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={SignUp} />
-          {user?.email == "has@gmail.com" && (
+          <Route
+            path="/login"
+            render={() => {
+              return user ? <Redirect to="/" /> : <Login />;
+            }}
+          />
+          <Route
+            path="/signup"
+            render={() => {
+              return user ? <Redirect to="/" /> : <SignUp />;
+            }}
+          />
+          {/* {user?.email == "has@gmail.com" && (
             <PrivateRoute path="/profile" component={Profile} />
+          )} */}
+          <Route path="/profile" component={Profile} />
+          {user && user.email != "has@gmail.com" && (
+            <Route path="/:id" component={Patientpro} />
           )}
         </Switch>
         <Scroll />

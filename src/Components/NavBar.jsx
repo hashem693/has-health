@@ -112,9 +112,12 @@ const NavBar = () => {
             </NavLink>
           </Nav.Link>
         )}
-        {user?.email == "has@gmail.com" && (
+        {user && (
           <Nav.Link>
-            <NavLink className="link text-decoration-none" to="/profile">
+            <NavLink
+              className="link text-decoration-none"
+              to={user?.email == "has@gmail.com" ? "/profile" : `/${user.uid}`}
+            >
               <FaUserCircle className="h3 mt-2" />
             </NavLink>
           </Nav.Link>

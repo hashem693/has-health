@@ -190,7 +190,7 @@ const Profile = () => {
       <div className="row py-3">
         <div className="profile__welcome col-md-6 col-sm-12 ">
           <p>
-            <span>Welcome Admin:</span> {user.email}
+            <span>Welcome Admin:</span> {user?.email}
           </p>
         </div>
 

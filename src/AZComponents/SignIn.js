@@ -34,7 +34,7 @@ function SignIn() {
     try {
       await auth.signInWithEmailAndPassword(input.email, input.password);
       setInput(initialState);
-      history.push("/profile");
+      // history.push("/");
     } catch (err) {
       setError(err.message);
     }

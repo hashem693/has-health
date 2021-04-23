@@ -5,15 +5,50 @@ import logo from "../assets/logo4.jpg";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 import { useState } from "react";
+import { db } from "../firebase/firebase";
+
+const initialState = {
+  firstName: "",
+  lastname: "",
+  phone: "",
+  gender: "",
+  email: "",
+  password: "",
+  confirmpassword: "",
+  appointments: [],
+};
 
 function DoctorSignUp() {
-  const {
-    handlechange,
-    handlesubmit,
-    values,
-    input,
-    handleChange2,
-  } = useForm();
+  const [values, setvalues] = useState(initialState);
+  const [error, setError] = useState("");
+
+  const handlechange = ({ target }) => {
+    setvalues({ ...values, [target.name]: target.value });
+  };
+  const addpatient = async (user) => {
+    const { firstName, lastname, phone, gender } = values;
+    await db
+      .collection("patients")
+      .doc(user.uid)
+      .set({ firstName, lastname, phone, gender });
+  };
+
+  const handlesubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        values.email,
+        values.password
+      );
+      setvalues(initialState);
+      // history.push("/");
+      addpatient(user);
+    } catch (err) {
+      setError(err.message);
+    }
+    await addpatient(values);
+    setvalues(initialState);
+  };
 
   return (
     <Container className="py-5 SignUp">
@@ -52,17 +87,6 @@ function DoctorSignUp() {
                 </Form.Group>
               </Col>
               <Col lg="6" md="10">
-                <Form.Group controlId="formBasiclicense">
-                  <Form.Control
-                    type="number"
-                    placeholder="license *"
-                    name="license"
-                    value={values.license}
-                    onChange={handlechange}
-                  />
-                </Form.Group>
-              </Col>
-              <Col lg="6" md="10">
                 <Form.Group controlId="formBasicPhone">
                   <Form.Control
                     type="text"
@@ -91,47 +115,13 @@ function DoctorSignUp() {
                 </Form.Group>
               </Col>
               <Col lg="6" md="10">
-                <Form.Group controlId="formBranch">
-                  <Form.Control
-                    as="select"
-                    defaultValue="Branch"
-                    name="branch"
-                    value={values.branch}
-                    onChange={handlechange}
-                  >
-                    <option class="d-none">Branch</option>
-                    <option> Alex </option>
-                    <option> Tanta </option>
-                    <option> Cairo </option>
-                    <option> Giza </option>
-                  </Form.Control>
-                </Form.Group>
-              </Col>
-              <Col lg="6" md="10">
-                <Form.Group controlId="formSpecialist">
-                  <Form.Control
-                    as="select"
-                    defaultValue="Specialist"
-                    name="specialist"
-                    value={values.specialist}
-                    onChange={handlechange}
-                  >
-                    <option class="d-none">Specialist</option>
-                    <option> Bones </option>
-                    <option> Dermal </option>
-                    <option> Rays </option>
-                    <option> Analyzes </option>
-                  </Form.Control>
-                </Form.Group>
-              </Col>
-              <Col lg="6" md="10">
                 <Form.Group controlId="formBasicEmail">
                   <Form.Control
                     type="email"
                     placeholder="Email *"
-                    value={input.email}
                     autoComplete="off"
-                    onChange={handleChange2}
+                    value={values.email}
+                    onChange={handlechange}
                     name="email"
                   />
                 </Form.Group>
@@ -143,9 +133,9 @@ function DoctorSignUp() {
                   <Form.Control
                     type="password"
                     placeholder="Password *"
-                    value={input.password}
                     autoComplete="off"
-                    onChange={handleChange2}
+                    value={values.password}
+                    onChange={handlechange}
                     name="password"
                   />
                 </Form.Group>
@@ -155,6 +145,9 @@ function DoctorSignUp() {
                   <Form.Control
                     type="password"
                     placeholder="Confirm Password *"
+                    value={values.confirmpassword}
+                    onChange={handlechange}
+                    name="confirmpassword"
                   />
                 </Form.Group>
               </Col>

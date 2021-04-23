@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Row, Col, Form, Button, Dropdown } from "react-bootstrap";
 import { useFirestore } from "../firebase/useFirestore";
 import "../AZStyles/Appointment.scss";
+import { AuthContext } from "../context/Auth";
+import firebase from "firebase/app";
+import { db } from "../firebase/firebase";
 
 const initialState = {
   location: "",
@@ -17,11 +20,17 @@ function Appointmentz() {
   const handlechange = ({ target }) => {
     setvalues({ ...values, [target.name]: target.value });
   };
-
+  const { user } = useContext(AuthContext);
   const handlesubmit = async (e, usertype) => {
     e.preventDefault();
     await addDoctor(values, usertype);
     setvalues(initialState);
+    await db
+      .collection("patients")
+      .doc(user.uid)
+      .update({
+        appointments: firebase.firestore.FieldValue.arrayUnion({ ...values }),
+      });
   };
 
   return (
