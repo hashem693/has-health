@@ -5,6 +5,11 @@
        size: cover;
        color:$main_color ;
     };
+    &__about{
+        span{
+            font-size: 15px;
+        }
+    }
     &__main{
         a{
             color: $base2_color;
@@ -16,6 +21,7 @@
     &__follow{
         li:hover{
             color: $base_color;
+            cursor: pointer;
         }
 
     }

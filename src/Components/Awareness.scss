@@ -1,0 +1,57 @@
+@import "../mainDesigns/Placeholder.scss", "../mainDesigns/Variables.scss";
+.Awareness {
+    .distincit{
+        color: $main2_color;
+    }
+  color: $base3_color;
+  &__header {
+    background: {
+      position: center;
+      size: cover;
+    }
+    .first {
+      font-size: 18px;
+    }
+    img {
+      width: 350px;
+    }
+    .icon {
+      color: $main2_color;
+    }
+    span {
+      font-size: 25px;
+      font-weight: 500;
+      color: $main2_color;
+    }
+  }
+  &__affects {
+    color: $base2_color;
+    background-color: $main_color;
+    .btn {
+      color: $main_color !important;
+      font-weight: 500;
+      background-color: $base2_color !important;
+    }
+  }
+  &__About{
+      line-height: 1.7;
+      img{
+          width: 90%;
+      }
+  }
+  &__cases{
+    img{
+        width: 70px;
+    }
+  }
+  &__Symptoms{
+    &__item{
+        background-color: $base2_color;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        p{
+            font-size: 15px;
+        }
+    }
+  }
+}

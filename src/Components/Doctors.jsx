@@ -17,7 +17,7 @@ const Doctors = () => {
             {doctors.map((doctor) => (
               <Card1
                 key={doctor.id}
-                firstName={doctor.firstName}
+                firstName={"Dr/ " + doctor.firstName}
                 lastname={doctor.lastname}
                 specialist={doctor.specialist}
               />
