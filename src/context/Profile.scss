@@ -1,5 +1,9 @@
 @import "../mainDesigns/Placeholder.scss", "../mainDesigns/Variables.scss";
 .profile {
+  button{
+    background-color: $main_color !important;
+    border: none;
+  }
   color: $base3_color;
   // &__header{
   //     h4{

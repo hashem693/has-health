@@ -5,6 +5,7 @@ import AwarenessAffects from "./AwarenessSections/AwarenessAffects";
 import AwarenessAbout from "./AwarenessSections/AwarenessAbout";
 import AwarenessCases from "./AwarenessSections/AwarenessCases";
 import AwarenessSymptoms from "./AwarenessSections/AwarenessSymptoms";
+import AwarenessPrevent from "./AwarenessSections/AwarenessPrevent";
 
 function Awareness() {
   return <div className="Awareness">
@@ -13,6 +14,7 @@ function Awareness() {
     <AwarenessAbout/>
     <AwarenessCases/>
     <AwarenessSymptoms/>
+    <AwarenessPrevent/>
   </div>;
 }
 

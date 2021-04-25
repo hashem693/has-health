@@ -1,5 +1,4 @@
 import React from "react";
-import "../MedicalTests.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -11,6 +10,8 @@ import card3 from "../../assets/card_03.jpg";
 import card4 from "../../assets/card_04.jpg";
 import { Link } from "react-router-dom";
 
+import "../MedicalTests.scss";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -18,21 +19,13 @@ const useStyles = makeStyles((theme) => ({
   media: {
     paddingTop: "85%", // 16:9
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
+
 }));
 
 function TestsBenifites() {
   const classes = useStyles();
   return (
+
     <section className="container pb-5 MedicalTests__benifites">
       <div className="row">
         <div className="col-md-6 col-sm-12  MedicalTests__benifites__imgs py-4">
@@ -150,7 +143,8 @@ function TestsBenifites() {
         </div>
       </div>
     </section>
-  );
+ 
+ );
 }
 
 export default TestsBenifites;

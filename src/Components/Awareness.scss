@@ -58,4 +58,33 @@
         }
     }
   }
+
+  &__Prevent {
+    .parag{
+      font-size: 14px ;
+
+    }
+    .item{
+      &:hover{
+        h5{
+color: $main_color;
+        }
+      }
+    }
+    &__desc {
+      .ben {
+        &::after {
+          @extend %p_lineAfter;
+        }
+      }
+
+      .Link {
+        color: $base2_color !important;
+        background-color: $main2_color !important;
+        &:hover {
+          background-color: $main_color !important;
+        }
+      }
+    }
+  }
 }
