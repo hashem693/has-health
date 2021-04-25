@@ -9,10 +9,10 @@ const Home = () => {
   return (
     <div>
       <Headersec />
-      <Doctorsection />
-      <SpecialistSection />
-      <FactsSections />
+      <Doctorsection />      
       <LocationSection />
+      <FactsSections />
+      <SpecialistSection />
     </div>
   );
 };

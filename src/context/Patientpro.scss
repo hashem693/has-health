@@ -1,0 +1,34 @@
+@import "../mainDesigns/Variables.scss", "../mainDesigns/Placeholder.scss";
+
+.Patient__profile {
+    color: $base3_color;
+    //line-height: 1.5;
+    h6{
+        color: $main2_color;
+    }
+    p.distinct{
+        font-weight: 500;
+        &::after{
+            @extend %p_lineAfter
+        }
+    }
+  .card-header,
+  button {
+    background-color: $base_color !important;
+  }
+  button {
+    border: none !important;
+    color: $main2_color !important;
+    &:hover {
+      border: none !important;
+      color: $main_color !important;
+    }
+  }
+  span {
+    color: $main2_color;
+    font-size: 17px;
+  }
+  p {
+    font-size: 15px;
+  }
+}

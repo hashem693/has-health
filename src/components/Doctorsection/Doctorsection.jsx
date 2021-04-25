@@ -35,9 +35,9 @@ function Doctorsection() {
             />
           ))}
         </div>
-        <div className="text-center">
+        <div className="text-center mt-5">
           <NavLink to="/doctors">
-            <Button className="px-4 py-2 viewbtn">View All</Button>
+            <Button className="px-5 py-3 viewbtn">View All</Button>
           </NavLink>
         </div>
       </div>
