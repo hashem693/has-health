@@ -62,9 +62,9 @@ function AwarenessSymptoms() {
               <div className="py-3">
                 <h3>Headache</h3>
                 <p className="text-muted mt-3">
-                Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing or shortness of breath.
-
-
+                  Around 1 out of every 6 people who gets COVID-19 becomes
+                  seriously ill and develops difficulty breathing or shortness
+                  of breath.
                 </p>
               </div>
             </div>

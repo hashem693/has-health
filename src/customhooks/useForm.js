@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useFirestore } from "../firebase/useFirestore";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase/firebase";
+import validation from "./validation/validation";
 
 const initialState = {
   firstName: "",
@@ -21,14 +22,14 @@ export const useForm = () => {
 
   const history = useHistory();
   const [input, setInput] = useState("");
-  const [error, setError] = useState("");
+  const [error, setErrors] = useState({});
 
   const handleChange2 = ({ target }) => {
     setInput({
       ...input,
       [target.name]: target.value,
     });
-    setError("");
+    setErrors("");
   };
 
   const handlechange = ({ target }) => {
@@ -37,6 +38,7 @@ export const useForm = () => {
 
   const handlesubmit = async (e, usertype) => {
     e.preventDefault();
+    setErrors(validation(values));
     await addDoctor(values, usertype);
     setvalues(initialState);
     try {
@@ -44,9 +46,9 @@ export const useForm = () => {
       setInput(authinitialState);
       history.push("/");
     } catch (err) {
-      setError(err.message);
+      setErrors(err.message);
     }
   };
 
-  return { handlechange, handlesubmit, values, input, handleChange2 };
+  return { handlechange, handlesubmit, values, input };
 };

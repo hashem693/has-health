@@ -522,7 +522,7 @@ const Profile = () => {
                 </Form.Control>
               </Form.Group>
             </Col>
-            <Col lg="6" md="10">
+            <Col lg="12" md="10">
               <Form.Group controlId="formSpecialist">
                 <Form.Control
                   as="select"

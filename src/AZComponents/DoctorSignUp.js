@@ -6,6 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 import { useState } from "react";
 import { db } from "../firebase/firebase";
+import validation from "../customhooks/validation/validation";
 
 const initialState = {
   firstName: "",
@@ -20,7 +21,7 @@ const initialState = {
 
 function DoctorSignUp() {
   const [values, setvalues] = useState(initialState);
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handlechange = ({ target }) => {
     setvalues({ ...values, [target.name]: target.value });
@@ -35,6 +36,7 @@ function DoctorSignUp() {
 
   const handlesubmit = async (e) => {
     e.preventDefault();
+    setErrors(validation(values));
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         values.email,
@@ -44,7 +46,7 @@ function DoctorSignUp() {
       // history.push("/");
       addpatient(user);
     } catch (err) {
-      setError(err.message);
+      // setError(err.message);
     }
     await addpatient(values);
     setvalues(initialState);
@@ -73,6 +75,11 @@ function DoctorSignUp() {
                     value={values.firstName}
                     onChange={handlechange}
                   />
+                  {errors.firstName && (
+                    <p className="text-danger text-left mt-2 ml-2">
+                      {errors.firstName}
+                    </p>
+                  )}
                 </Form.Group>
               </Col>
               <Col lg="6" md="10">
@@ -84,8 +91,15 @@ function DoctorSignUp() {
                     value={values.lastname}
                     onChange={handlechange}
                   />
+                  {errors.lastname && (
+                    <p className="text-danger text-left mt-2 ml-2">
+                      {errors.lastname}
+                    </p>
+                  )}
                 </Form.Group>
               </Col>
+            </Form.Row>
+            <Form.Row>
               <Col lg="6" md="10">
                 <Form.Group controlId="formBasicPhone">
                   <Form.Control
@@ -97,8 +111,6 @@ function DoctorSignUp() {
                   />
                 </Form.Group>
               </Col>
-            </Form.Row>
-            <Form.Row>
               <Col lg="6" md="10">
                 <Form.Group controlId="formGender">
                   <Form.Control
@@ -114,7 +126,7 @@ function DoctorSignUp() {
                   </Form.Control>
                 </Form.Group>
               </Col>
-              <Col lg="6" md="10">
+              <Col lg="12" md="10">
                 <Form.Group controlId="formBasicEmail">
                   <Form.Control
                     type="email"
@@ -124,6 +136,11 @@ function DoctorSignUp() {
                     onChange={handlechange}
                     name="email"
                   />
+                  {errors.email && (
+                    <p className="text-danger text-left mt-2 ml-2">
+                      {errors.email}
+                    </p>
+                  )}
                 </Form.Group>
               </Col>
             </Form.Row>
@@ -138,6 +155,11 @@ function DoctorSignUp() {
                     onChange={handlechange}
                     name="password"
                   />
+                  {errors.password && (
+                    <p className="text-danger text-left mt-2 ml-2">
+                      {errors.password}
+                    </p>
+                  )}
                 </Form.Group>
               </Col>
               <Col lg="6" md="10">
@@ -149,6 +171,11 @@ function DoctorSignUp() {
                     onChange={handlechange}
                     name="confirmpassword"
                   />
+                  {errors.confirmpassword && (
+                    <p className="text-danger text-left mt-2 ml-2">
+                      {errors.confirmpassword}
+                    </p>
+                  )}
                 </Form.Group>
               </Col>
             </Form.Row>
