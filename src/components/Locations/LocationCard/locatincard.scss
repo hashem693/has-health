@@ -5,10 +5,19 @@
       @extend %h2_lineAfter;
     }
   }
-  .carousel-indicators li{
-    background-color: $base_color !important;
-
+  h3{
+    &::after{
+      @extend %p_lineAfter;
+      margin-top: 15px;
+    }
   }
+  .MuiMobileStepper-root{
+    background-color: $base2_color !important;
+  }
+  ul{
+    line-height: 1.9;
+  }
+
   .cardb {
     background-color: $base_color;
     .MapMarker {

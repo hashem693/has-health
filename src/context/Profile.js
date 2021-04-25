@@ -226,7 +226,6 @@ const Profile = () => {
                   />
                 </StyledTreeItem>
               ))}
-
               {/* <StyledTreeItem nodeId="2" label="Doctor Name">
                 <StyledTreeItem nodeId="4" label="Doctor Specialist" />
               </StyledTreeItem> */}

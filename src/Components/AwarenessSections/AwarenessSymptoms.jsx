@@ -18,8 +18,8 @@ function AwarenessSymptoms() {
           <h2>What are the basic symptoms?</h2>
         </div>
         <div className="row py-4">
-          <div className="col-md-6 col-sm-12 py-3">
-            <div className="Awareness__Symptoms__item d-flex px-3">
+          <div className="col-lg-6 col-md-12 py-3">
+            <div className="Awareness__Symptoms__item d-flex px-2">
               <img className="img-fluid mr-5" src={img1} alt="" />
               <div className="py-3">
                 <h3>High fever</h3>
@@ -31,8 +31,8 @@ function AwarenessSymptoms() {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-sm-12 py-3">
-            <div className="Awareness__Symptoms__item d-flex px-3">
+          <div className="col-lg-6 col-md-12 py-3">
+            <div className="Awareness__Symptoms__item d-flex px-2">
               <img className="img-fluid mr-5" src={img2} alt="" />
               <div className="py-3">
                 <h3>Sortness of Breath</h3>
@@ -43,8 +43,8 @@ function AwarenessSymptoms() {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-sm-12 py-3">
-            <div className="Awareness__Symptoms__item d-flex px-3">
+          <div className="col-lg-6 col-md-12 py-3">
+            <div className="Awareness__Symptoms__item d-flex px-2">
               <img className="img-fluid mr-5" src={img3} alt="" />
               <div className="py-3">
                 <h3>Dry Cough</h3>
@@ -56,15 +56,15 @@ function AwarenessSymptoms() {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-sm-12 py-3">
-            <div className="Awareness__Symptoms__item d-flex px-3">
+          <div className="col-lg-6 col-md-12 py-3">
+            <div className="Awareness__Symptoms__item d-flex px-2">
               <img className="img-fluid mr-5" src={img4} alt="" />
               <div className="py-3">
                 <h3>Headache</h3>
                 <p className="text-muted mt-3">
-                Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing or shortness of breath.
-
-
+                  Around 1 out of every 6 people who gets COVID-19 becomes
+                  seriously ill and develops difficulty breathing or shortness
+                  of breath.
                 </p>
               </div>
             </div>

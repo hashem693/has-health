@@ -23,7 +23,9 @@
         .MuiButtonBase-root ,.MuiAccordionSummary-root ,.Mui-expanded{
             &:hover{
                 background-color: $main2_color;
-                color: $base2_color !important;
+                p{
+                  color: $base2_color !important;
+                }
                 .MuiIconButton-root {
                     color: $base2_color !important;
                 }

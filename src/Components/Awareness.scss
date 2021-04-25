@@ -45,12 +45,16 @@
     }
   }
   &__Symptoms{
+   
     &__item{
         background-color: $base2_color;
         border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         p{
             font-size: 15px;
+        }
+        @media screen and (max-width:425px) {
+          flex-wrap: wrap !important;
         }
     }
   }

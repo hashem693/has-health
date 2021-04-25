@@ -5,7 +5,7 @@ import "../LocationCard/locatincard.scss";
 
 function LocationCard({ name, address, phone }) {
   return (
-    <Card className="text-center px-4 py-3 mb-5 cardb mx-2 border-0">
+    <Card className="text-center px-4 py-3 cardb mx-2 border-0">
       <Card.Body>
         <Card.Title>
           <FaMapMarkerAlt className="MapMarker" />
